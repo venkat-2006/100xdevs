@@ -56,7 +56,7 @@ function App() {
         </div>
       </nav>
 
-      {/* Main section */}
+      
       <div className="bg-black h-screen flex items-center justify-center text-white text-3xl">
         Hello Tailwind!
       </div>
