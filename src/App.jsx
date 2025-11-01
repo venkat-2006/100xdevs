@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
@@ -25,7 +25,7 @@ function App() {
 
           <div className="flex items-center gap-4">
 
-            <button className="flex items-center justify-center h-10 w-10 rounded-lg bg-transparent hover:bg-blue-600/10 transition">
+            <button className="group flex items-center justify-center h-10 w-10 rounded-lg bg-transparent transition">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -36,11 +36,13 @@ function App() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-blue-500"
+                className="text-white group-hover:text-blue-500 transition"
               >
                 <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
               </svg>
             </button>
+
+
 
             <button className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200">
               Login
@@ -56,7 +58,7 @@ function App() {
         </div>
       </nav>
 
-      
+
       <div className="bg-black h-screen flex items-center justify-center text-white text-3xl">
         Hello Tailwind!
       </div>
