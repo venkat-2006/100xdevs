@@ -9,7 +9,7 @@ function App() {
       <nav className="fixed top-0 z-[999] w-full border-b border-white/10 bg-black text-white">
         <div className="flex w-full items-center justify-between px-10 py-5">
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ">
             <a href="/" className="flex items-center gap-2">
               <img
                 src="https://appx-wsb-gcp.akamai.net.in/subject/2023-01-17-0.17044360120951185.jpg"
@@ -60,7 +60,7 @@ function App() {
 
   <main>
       <div className="bg-black h-screen flex flex-col items-center justify-center text-white text-3xl">
-        <div className="flex flex-col text-7xl font-black tracking-tighter">
+        <div className="flex flex-col text-7xl font-black tracking-tighter mt-32">
           <div className="flex flex-wrap items-baseline">
             <span className="bg-gradient-to-b from-blue-400 to-blue-700 bg-clip-text text-transparent">
               100x Devs,
@@ -72,7 +72,7 @@ function App() {
         <div className="p-4 text-lg">
           A beginner-friendly platform for mastering programming skills.
         </div>
-        <div className="py-4">
+        <div className="py-4 mb-8">
           <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-6 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
             Explore courses
           </button>
