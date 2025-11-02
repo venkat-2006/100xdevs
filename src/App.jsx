@@ -58,62 +58,121 @@ function App() {
         </div>
       </nav>
 
-  <main>
-      <div className="bg-black h-screen flex flex-col items-center justify-center text-white text-3xl">
-        <div className="flex flex-col text-7xl font-black tracking-tighter mt-32">
-          <div className="flex flex-wrap items-baseline">
-            <span className="bg-gradient-to-b from-blue-400 to-blue-700 bg-clip-text text-transparent">
-              100x Devs,
-            </span>
-            <span className="text-white">&nbsp;because</span>
+      <main>
+        <div className="bg-black h-screen flex flex-col items-center justify-center text-white text-3xl">
+          <div className="flex flex-col text-7xl font-black tracking-tighter mt-32">
+            <div className="flex flex-wrap items-baseline">
+              <span className="bg-gradient-to-b from-blue-400 to-blue-700 bg-clip-text text-transparent">
+                100x Devs,
+              </span>
+              <span className="text-white">&nbsp;because</span>
+            </div>
+            <div className="text-white pl-8">10x ain't enough!</div>
           </div>
-          <div className="text-white pl-8">10x ain't enough!</div>
+          <div className="p-4 text-lg">
+            A beginner-friendly platform for mastering programming skills.
+          </div>
+          <div className="py-4 mb-8">
+            <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-6 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
+              Explore courses
+            </button>
+            <button className="bg-white text-black px-6 py-3 rounded-md text-sm hover:bg-gray-100 transition-colors duration-200 ml-1">
+              Explore Notes
+            </button>
+          </div>
+          <div className="relative w-full py-6 bg-black">
+            {/* Bluish-black gradient overlays with smooth fade */}
+
+            {/* Sharp-edged black gradient overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-r from-black from-50% to-transparent"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-l from-black from-50% to-transparent"></div>
+
+            {/* Scrolling container */}
+            <div className="overflow-hidden w-full max-w-7xl mx-auto">
+              <div className="flex animate-scroll gap-6">
+
+                {/* Group 1 */}
+                <div className="flex gap-6 shrink-0">
+                  <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                </div>
+
+                {/* Group 2 (duplicate for seamless scroll) */}
+                <div className="flex gap-6 shrink-0">
+                  <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
-        <div className="p-4 text-lg">
-          A beginner-friendly platform for mastering programming skills.
+        <div className="h-[350px] bg-black flex items-center justify-center">
+          <div className=" text-white w-[1300px] bg-blue-400 rounded-2xl p-8 h-[300px]  shadow-lg bg-gradient-to-b from-blue-400 to-blue-700">
+            <div className="text-4xl w-[800px]">
+              Every developer deserves to be a great engineer, a 100x Engineer!
+            </div>
+            <div className="w-[800px] text-[1.33rem] pt-2">
+              Give yourself the power you deserve with a 100xdevs today!
+
+            </div >
+            <div className="flex gap-x-2 py-4">
+              <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download App
+            </button>
+            <button className="flex items-center gap-2 bg-slate-800 text-white px-7 py-2.5 rounded-xl hover:bg-blue-700 transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5"
+              >
+                <path d="M12 3v2" />
+                <path d="M12 19v2" />
+                <path d="M4.93 4.93l1.41 1.41" />
+                <path d="M17.66 17.66l1.41 1.41" />
+                <path d="M1 12h2" />
+                <path d="M21 12h2" />
+                <path d="M4.93 19.07l1.41-1.41" />
+                <path d="M17.66 6.34l1.41-1.41" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              Join now
+            </button>
+
+            </div>
+            
+
+
+
+          </div>
         </div>
-        <div className="py-4 mb-8">
-          <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-6 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
-            Explore courses
-          </button>
-          <button className="bg-white text-black px-6 py-3 rounded-md text-sm hover:bg-gray-100 transition-colors duration-200 ml-1">
-            Explore Notes
-          </button>
-        </div>
-<div className="relative w-full py-6 bg-black">
-  {/* Bluish-black gradient overlays with smooth fade */}
 
-  {/* Sharp-edged black gradient overlays */}
-  <div className="absolute left-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-r from-black from-50% to-transparent"></div>
-  <div className="absolute right-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-l from-black from-50% to-transparent"></div>
-
-  {/* Scrolling container */}
-  <div className="overflow-hidden w-full max-w-7xl mx-auto">
-    <div className="flex animate-scroll gap-6">
-      
-      {/* Group 1 */}
-      <div className="flex gap-6 shrink-0">
-        <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-      </div>
-
-      {/* Group 2 (duplicate for seamless scroll) */}
-      <div className="flex gap-6 shrink-0">
-        <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
-      </div>
-    </div>
-  </div>
-</div>
-
-
-      </div>
       </main>
     </>
   );
