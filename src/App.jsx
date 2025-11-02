@@ -88,90 +88,138 @@ function App() {
             <div className="absolute right-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-l from-black from-50% to-transparent"></div>
 
             {/* Scrolling container */}
-            <div className="overflow-hidden w-full max-w-7xl mx-auto">
-              <div className="flex animate-scroll gap-6">
+         <div className="w-full max-w-7xl mx-auto overflow-hidden">
+  <div className="flex animate-scroll gap-6 overflow-visible pt-6">
+    
+    {/* Group 1 */}
+    <div className="flex gap-6 shrink-0">
+      {[
+        "https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png",
+        "https://100x-b-mcdn.akamai.net.in/images/ds.jpeg",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png",
+      ].map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          className="w-[420px] h-[220px]  object-cover rounded-xl shadow-lg shadow-white/10 transition-all duration-500 hover:-translate-y-3 hover:shadow-white/20 cursor-pointer"
+        />
+      ))}
+    </div>
 
-                {/* Group 1 */}
-                <div className="flex gap-6 shrink-0">
-                  <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                </div>
-
-                {/* Group 2 (duplicate for seamless scroll) */}
-                <div className="flex gap-6 shrink-0">
-                  <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                  <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0 cursor-pointer" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-        <div className="h-[350px] bg-black flex items-center justify-center">
-          <div className=" text-white w-[1300px] bg-blue-400 rounded-2xl p-8 h-[300px]  shadow-lg bg-gradient-to-b from-blue-400 to-blue-700">
-            <div className="text-4xl w-[800px]">
-              Every developer deserves to be a great engineer, a 100x Engineer!
-            </div>
-            <div className="w-[800px] text-[1.33rem] pt-2">
-              Give yourself the power you deserve with a 100xdevs today!
-
-            </div >
-            <div className="flex gap-x-2 py-4">
-              <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-5 h-5"
-              >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Download App
-            </button>
-            <button className="flex items-center gap-2 bg-slate-800 text-white px-7 py-2.5 rounded-xl hover:bg-blue-700 transition">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-5 h-5"
-              >
-                <path d="M12 3v2" />
-                <path d="M12 19v2" />
-                <path d="M4.93 4.93l1.41 1.41" />
-                <path d="M17.66 17.66l1.41 1.41" />
-                <path d="M1 12h2" />
-                <path d="M21 12h2" />
-                <path d="M4.93 19.07l1.41-1.41" />
-                <path d="M17.66 6.34l1.41-1.41" />
-                <circle cx="12" cy="12" r="3" />
-              </svg>
-              Join now
-            </button>
-
-            </div>
-            
+    {/* Group 2 */}
+    <div className="flex gap-6 shrink-0">
+      {[
+        "https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png",
+        "https://100x-b-mcdn.akamai.net.in/images/ds.jpeg",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png",
+        "https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png",
+      ].map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shadow-white/10 transition-all duration-500 hover:-translate-y-3 hover:shadow-white/20 cursor-pointer"
+        />
+      ))}
+    </div>
+  </div>
+</div>
 
 
 
           </div>
+
+
         </div>
+       <div className="h-[350px] bg-black flex items-center justify-center">
+  <div className="relative text-white w-[1300px] bg-gradient-to-b from-blue-400 to-blue-700 rounded-2xl p-8 h-[330px] shadow-lg flex items-center justify-between overflow-hidden">
+    
+    {/* LEFT CONTENT */}
+    <div className="z-10">
+      <div className="text-4xl w-[800px]">
+        Every developer deserves to be a great engineer, a 100x Engineer!
+      </div>
+      <div className="w-[800px] text-[1.33rem] pt-2">
+        Give yourself the power you deserve with a 100xdevs today!
+      </div>
+      <div className="flex gap-x-2 py-4">
+        <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download App
+        </button>
+
+        <button className="flex items-center gap-2 bg-slate-800 text-white px-7 py-2.5 rounded-xl hover:bg-blue-700 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5"
+          >
+            <path d="M12 3v2" />
+            <path d="M12 19v2" />
+            <path d="M4.93 4.93l1.41 1.41" />
+            <path d="M17.66 17.66l1.41 1.41" />
+            <path d="M1 12h2" />
+            <path d="M21 12h2" />
+            <path d="M4.93 19.07l1.41-1.41" />
+            <path d="M17.66 6.34l1.41-1.41" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          Join now
+        </button>
+      </div>
+    </div>
+
+    {/* RIGHT IMAGE CARD */}
+ <div className="absolute right-6 bottom-[-500px] group">
+  <img
+    src="https://app.100xdevs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMockup.01b5ae40.png&w=1080&q=75"
+    alt="Mockup"
+    className="w-[400px] rotate-3 transition-all duration-300 group-hover:-translate-y-4 group-hover:rotate-6 cursor-pointer animate-tilt"
+  />
+  
+  <style jsx>{`
+    @keyframes tilt {
+      0%, 100% {
+        transform: rotate(3deg);
+      }
+      50% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    .animate-tilt {
+      animation: tilt 3s ease-in-out infinite;
+    }
+
+    .group:hover .animate-tilt {
+      animation: none;
+    }
+  `}</style>
+</div>
+
+  </div>
+</div>
+
 
       </main>
     </>
