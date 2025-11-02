@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * (384px * 5 + 24px * 5)));
+  }
+}
+
+.animate-scroll {
+  animation: scroll 140s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}

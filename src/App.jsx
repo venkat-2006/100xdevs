@@ -58,7 +58,7 @@ function App() {
         </div>
       </nav>
 
-
+  <main>
       <div className="bg-black h-screen flex flex-col items-center justify-center text-white text-3xl">
         <div className="flex flex-col text-7xl font-black tracking-tighter">
           <div className="flex flex-wrap items-baseline">
@@ -80,8 +80,41 @@ function App() {
             Explore Notes
           </button>
         </div>
+<div className="relative w-full py-6 bg-black">
+  {/* Bluish-black gradient overlays with smooth fade */}
+
+  {/* Sharp-edged black gradient overlays */}
+  <div className="absolute left-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-r from-black from-50% to-transparent"></div>
+  <div className="absolute right-0 top-0 bottom-0 w-64 z-10 pointer-events-none bg-gradient-to-l from-black from-50% to-transparent"></div>
+
+  {/* Scrolling container */}
+  <div className="overflow-hidden w-full max-w-7xl mx-auto">
+    <div className="flex animate-scroll gap-6">
+      
+      {/* Group 1 */}
+      <div className="flex gap-6 shrink-0">
+        <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+      </div>
+
+      {/* Group 2 (duplicate for seamless scroll) */}
+      <div className="flex gap-6 shrink-0">
+        <img src="https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.27031454992467685.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://100x-b-mcdn.akamai.net.in/images/ds.jpeg" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.6125162399767927.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+        <img src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png" className="w-[420px] h-[220px] object-cover rounded-xl shadow-lg shrink-0" />
+      </div>
+    </div>
+  </div>
+</div>
+
 
       </div>
+      </main>
     </>
   );
 }
