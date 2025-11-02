@@ -7,16 +7,16 @@ function App() {
   return (
     <>
       <nav className="fixed top-0 z-[999] w-full border-b border-white/10 bg-black text-white">
-        <div className="flex w-full items-center justify-between px-10 py-5">
+        <div className="flex w-full items-center justify-between px-10 py-4">
 
-          <div className="flex items-center gap-3 ">
+          <div className="flex items-center gap-3 ml-12">
             <a href="/" className="flex items-center gap-2">
               <img
                 src="https://appx-wsb-gcp.akamai.net.in/subject/2023-01-17-0.17044360120951185.jpg"
                 alt="100xDevs Logo"
                 className="h-10 w-10 rounded-full"
               />
-              <p className="hidden min-[375px]:block bg-gradient-to-b from-blue-400 to-blue-700 bg-clip-text text-2xl font-black tracking-tighter text-transparent">
+              <p className="hidden min-[375px]:block bg-gradient-to-b from-blue-400 to-blue-700 bg-clip-text text-2xl font-black tracking-tighter text-transparent ">
                 100xDevs
               </p>
             </a>
@@ -49,7 +49,7 @@ function App() {
             </button>
 
 
-            <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-80 transition-all duration-300">
+            <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-80 transition-all duration-300 mr-12">
               <a href="/" target="_blank">
                 Join now
               </a>
