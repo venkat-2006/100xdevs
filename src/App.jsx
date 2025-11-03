@@ -219,11 +219,11 @@ function App() {
 
           </div>
         </div>
-      <div className="h-[300px] bg-black flex text-white items-center justify-center">
+      <footer className="h-[300px] bg-black flex text-white items-center justify-center">
   <div className="flex-[2] text-center">1</div>
   <div className="flex-1 text-center">2</div>
   <div className="flex-1 text-center">3</div>
-</div>
+</footer>
 
 
       </main>
