@@ -313,8 +313,27 @@ function App() {
   </div>
 
   </div>
-  <div className="flex-1 text-center">2</div>
-  <div className="flex-1 text-center">3</div>
+  <div className="flex-1 text-lg">100x Links
+      <div className="pt-2 text-gray-400 duration-300 hover:text-blue-900 cursor-pointer">
+        Projects
+      </div>
+      <div className="pt-2 text-gray-400 duration-300 hover:text-blue-900 cursor-pointer "> 
+        Report
+      </div>
+  </div>
+  <div className="flex-1 text-lg ml-5  ">
+    100x Legal
+     <div className="pt-2  text-gray-400  duration-300 hover:text-blue-900 cursor-pointer">
+        Terms & Conditions
+      </div>
+       <div className="pt-2  text-gray-400   duration-300 hover:text-blue-900 cursor-pointer">
+        Privacy Policy
+      </div>
+       <div className="pt-2  text-gray-400  duration-300 hover:text-blue-900 cursor-pointer">
+        Refund & Cancellation
+      </div>
+
+  </div>
 </footer>
 
 
