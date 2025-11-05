@@ -38,7 +38,7 @@ function App() {
         }
         
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 80s linear infinite;
         }
         
         @keyframes tilt {
@@ -120,11 +120,11 @@ function App() {
               )}
             </button>
 
-            <button className="bg-white text-black px-4 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors duration-200">
+            <button className="bg-white text-black dark:text-white dark:bg-black px-4 py-2 rounded-md font-medium hover:bg-gray-400 dark:hover:bg-gray-200 transition-colors duration-200">
               Login
             </button>
 
-            <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-80 transition-all duration-300 mr-12">
+            <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-70 transition-all duration-300 mr-12">
               <a href="/" target="_blank">
                 Join now
               </a>
@@ -151,7 +151,7 @@ function App() {
             <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-7 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
               Explore courses
             </button>
-            <button className="bg-white text-black px-7 py-3 rounded-md text-sm hover:bg-gray-100 transition-colors duration-200 ml-1">
+            <button className="bg-white text-black dark:text-white dark:bg-black px-7 py-3 rounded-md text-sm hover:bg-gray-100 transition-colors duration-200 ml-1">
               Explore Notes
             </button>
           </div>
@@ -346,23 +346,23 @@ function App() {
 
             <div className="flex-1">
               <div className="text-lg font-semibold mb-3">100x Links</div>
-              <div className="pt-2 text-gray-400 dark:text-gray-600 duration-300 hover:text-blue-500 cursor-pointer">
+              <div className="pt-2 text-gray-400 dark:text-gray-600 hover:text-blue-500 dark:hover:text-blue-500 duration-300 cursor-pointer">
                 Projects
               </div>
-              <div className="pt-2 text-gray-400 dark:text-gray-600 duration-300 hover:text-blue-500 cursor-pointer">
+              <div className="pt-2 text-gray-400 dark:text-gray-600 hover:text-blue-500 dark:hover:text-blue-500 duration-300 cursor-pointer">
                 Report
               </div>
             </div>
 
             <div className="flex-1">
               <div className="text-lg font-semibold mb-3">100x Legal</div>
-              <div className="pt-2 text-gray-400 dark:text-gray-600 duration-300 hover:text-blue-500 cursor-pointer">
+              <div className="pt-2 text-gray-400 dark:text-gray-600 hover:text-blue-500 dark:hover:text-blue-500 duration-300 cursor-pointer">
                 Terms & Conditions
               </div>
-              <div className="pt-2 text-gray-400 dark:text-gray-600 duration-300 hover:text-blue-500 cursor-pointer">
+              <div className="pt-2 text-gray-400 dark:text-gray-600 hover:text-blue-500 dark:hover:text-blue-500 duration-300 cursor-pointer">
                 Privacy Policy
               </div>
-              <div className="pt-2 text-gray-400 dark:text-gray-600 duration-300 hover:text-blue-500 cursor-pointer">
+              <div className="pt-2 text-gray-400 dark:text-gray-600 hover:text-blue-500 dark:hover:text-blue-500 duration-300 cursor-pointer">
                 Refund & Cancellation
               </div>
             </div>
