@@ -90,7 +90,7 @@ function App() {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-gray-400 group-hover:rotate-45 transition-transform duration-300"
+                  className="text-gray-900 group-hover:rotate-45 transition-transform duration-300"
                 >
                   <circle cx="12" cy="12" r="5" />
                   <line x1="12" y1="1" x2="12" y2="3" />
@@ -161,7 +161,7 @@ function App() {
 
             {/* Scrolling container */}
             <div className="w-full max-w-7xl mx-auto overflow-hidden">
-              <div className="flex animate-scroll gap-6 pt-6">
+              <div className="flex animate-scroll gap-6 pt-2">
                 {/* Group 1 */}
                 <div className="flex gap-6 shrink-0">
                   {[
