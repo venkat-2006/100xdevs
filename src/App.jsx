@@ -62,7 +62,7 @@ function App() {
       <nav className="fixed top-0 z-[999] w-full border-b border-white/25 bg-black text-white dark:bg-gray-100 dark:text-black dark:border-gray-300 transition-all duration-300">
         <div className="flex w-full items-center justify-between px-10 py-4">
           <div className="flex items-center gap-3 ml-12">
-            <a href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2 ">
               <img
                 src="https://appx-wsb-gcp.akamai.net.in/subject/2023-01-17-0.17044360120951185.jpg"
                 alt="100xDevs Logo"
@@ -199,69 +199,72 @@ function App() {
           </div>
         </div>
 
-        <div className="h-[380px] bg-black dark:bg-white flex items-center justify-center border-b border-white/25 dark:border-gray-300">
-          <div className="relative text-white w-[1300px] bg-gradient-to-b from-blue-400 to-blue-700 rounded-2xl p-8 h-[330px] shadow-lg flex items-center justify-between overflow-hidden">
-            <div className="z-10">
-              <div className="text-4xl w-[800px]">
-                Every developer deserves to be a great engineer, a 100x Engineer!
-              </div>
-              <div className="w-[800px] text-[1.33rem] pt-2">
-                Give yourself the power you deserve with a 100xdevs today!
-              </div>
-              <div className="flex gap-x-2 py-4">
-                <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5"
-                  >
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  Download App
-                </button>
+       <div className="h-[380px] bg-black dark:bg-white flex items-center justify-center border-b border-white/25 dark:border-gray-300">
+  <div className="relative text-white w-[1300px] bg-gradient-to-b from-blue-400 to-blue-700 rounded-2xl p-8 h-[330px] shadow-lg flex items-center justify-between overflow-hidden">
+    
+    {/* ✅ moved text block slightly upward */}
+    <div className="z-10 -translate-y-6">
+      <div className="text-4xl w-[800px]">
+        Every developer deserves to be a great engineer, a 100x Engineer!
+      </div>
+      <div className="w-[800px] text-[1.33rem] pt-2">
+        Give yourself the power you deserve with a 100xdevs today!
+      </div>
+      <div className="flex gap-x-2 py-4">
+        <button className="flex items-center gap-2 bg-white text-black px-6 py-2 rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download App
+        </button>
 
-                <button className="flex items-center gap-2 bg-slate-800 text-white px-7 py-2.5 rounded-xl hover:bg-blue-700 transition">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-5 h-5"
-                  >
-                    <path d="M12 3v2" />
-                    <path d="M12 19v2" />
-                    <path d="M4.93 4.93l1.41 1.41" />
-                    <path d="M17.66 17.66l1.41 1.41" />
-                    <path d="M1 12h2" />
-                    <path d="M21 12h2" />
-                    <path d="M4.93 19.07l1.41-1.41" />
-                    <path d="M17.66 6.34l1.41-1.41" />
-                    <circle cx="12" cy="12" r="3" />
-                  </svg>
-                  Join now
-                </button>
-              </div>
-            </div>
+        <button className="flex items-center gap-2 bg-slate-800 text-white px-7 py-2.5 rounded-xl hover:bg-blue-700 transition">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5"
+          >
+            <path d="M12 3v2" />
+            <path d="M12 19v2" />
+            <path d="M4.93 4.93l1.41 1.41" />
+            <path d="M17.66 17.66l1.41 1.41" />
+            <path d="M1 12h2" />
+            <path d="M21 12h2" />
+            <path d="M4.93 19.07l1.41-1.41" />
+            <path d="M17.66 6.34l1.41-1.41" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          Join now
+        </button>
+      </div>
+    </div>
 
-            <div className="absolute right-6 bottom-[-500px] group">
-              <img
-                src="https://app.100xdevs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMockup.01b5ae40.png&w=1080&q=75"
-                alt="Mockup"
-                className="w-[400px] rotate-3 transition-all duration-300 group-hover:-translate-y-4 group-hover:rotate-6 cursor-pointer animate-tilt"
-              />
-            </div>
-          </div>
-        </div>
+    <div className="absolute right-6 bottom-[-500px] group">
+      <img
+        src="https://app.100xdevs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMockup.01b5ae40.png&w=1080&q=75"
+        alt="Mockup"
+        className="w-[400px] rotate-3 transition-all duration-300 group-hover:-translate-y-4 group-hover:rotate-6 cursor-pointer animate-tilt"
+      />
+    </div>
+  </div>
+</div>
+
 
         <footer className="bg-black text-white dark:bg-gray-100 dark:text-black border-t border-white/25 dark:border-gray-300 transition-all duration-500 py-12 px-12">
           <div className="flex gap-12">

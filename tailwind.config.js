@@ -16,6 +16,11 @@ export default {
       animation: {
         float: 'float 4s ease-in-out infinite',
       },
+
+      
+      fontFamily: {
+        satoshi: ['Satoshi', 'sans-serif'],
+      },
     },
   },
   plugins: [],
