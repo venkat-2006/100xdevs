@@ -55,7 +55,7 @@ export default function Login({ lightMode, setLightMode }) {
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-600 hover:text-gray-300 dark:hover:text-gray-700 transition"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-600 transition"
               >
                 {showPassword ? (
                   <svg
