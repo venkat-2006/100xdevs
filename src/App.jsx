@@ -178,7 +178,7 @@ function App() {
               <div className="absolute right-0 top-0 bottom-0 w-96 z-10 pointer-events-none bg-gradient-to-l from-black dark:from-white via-black/80 dark:via-white/80 to-transparent"></div>
 
               <div className="w-full max-w-7xl mx-auto overflow-hidden">
-                <div className="flex animate-scroll gap-6 pt-2">
+                <div className="flex animate-scroll gap-6 pt-6 pb-4">
                   <div className="flex gap-6 shrink-0">
                     {[
                       "https://100x-b-mcdn.akamai.net.in/images/adhoc.jpeg",
@@ -271,7 +271,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="absolute right-6 bottom-0 group hidden lg:block">
+              <div className="absolute right-6 bottom-0 top-10 group hidden lg:block">
                 <img
                   src="https://app.100xdevs.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMockup.01b5ae40.png&w=1080&q=75"
                   alt="Mockup"
