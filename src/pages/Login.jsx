@@ -6,6 +6,7 @@ export default function Login({ lightMode, setLightMode }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,30 +39,67 @@ export default function Login({ lightMode, setLightMode }) {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="name@email.com"
               required
-              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 dark:bg-white dark:border-gray-200 text-white dark:text-black placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-4"
+              className="w-full px-4 py-2 rounded-md bg-white/5 border border-white/10 dark:bg-white dark:border-gray-200 text-white dark:text-black placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-4"
             />
 
             <label className="text-xs text-gray-300 dark:text-gray-700 mb-2">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-              required
-              className="w-full px-4 py-3 rounded-md bg-white/5 border border-white/10 dark:bg-white dark:border-gray-200 text-white dark:text-black placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition mb-6"
-            />
+            <div className="relative mb-6">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+                required
+                className="w-full px-4 py-2 pr-12 rounded-md bg-white/5 border border-white/10 dark:bg-white dark:border-gray-200 text-white dark:text-black placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-600 hover:text-gray-300 dark:hover:text-gray-700 transition"
+              >
+                {showPassword ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                    <line x1="1" y1="1" x2="23" y2="23" />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                )}
+              </button>
+            </div>
 
             <button
               type="submit"
-              className="w-full mt-auto bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-3 rounded-md font-semibold hover:opacity-90 transition"
+              className="w-full bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-3 rounded-md font-semibold hover:opacity-90 transition"
             >
               Login
             </button>
           </form>
 
-          <div className="text-center mt-4 text-xs text-gray-400 dark:text-gray-600">
-            Don't have an account? <button onClick={() => navigate("/signup")} className="text-blue-400 hover:underline">Sign up</button>
-          </div>
+          
         </div>
       </div>
     </>
