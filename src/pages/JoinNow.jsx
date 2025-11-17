@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function JoinNow() {
-const [active, setActive] = useState("courses");
+    const [active, setActive] = useState("courses");
 
     return (
         <>
@@ -58,8 +58,10 @@ const [active, setActive] = useState("courses");
             </nav>
             <div className="pt-[60px]">
 
-                <div className="grid grid-cols-11">
-                    <div className="col-span-2 bg-blue-100 h-screen">
+               <div>
+
+                    <div className="fixed left-0 top-[60px] w-[18%] bg-blue-100 h-[calc(100vh-60px)] overflow-auto">
+
                         <div className="pt-[40px] pl-7">
                             MAIN MENU
                         </div>
@@ -96,6 +98,7 @@ const [active, setActive] = useState("courses");
 
                         <div className="pt-[30px] pl-7">
                             <Link
+                                to="/all-courses"
                                 onClick={() => setActive("courses")}
                                 className="flex items-center cursor-pointer"
                             >
@@ -131,10 +134,32 @@ const [active, setActive] = useState("courses");
 
 
                     </div>
-
-                    <div className="col-span-9">
-                        .
+                    <div className="ml-[18%] px-6 h-[calc(100vh-60px)] overflow-y-scroll">
+                        
+                        <div className="space-y-10">
+                            <p>Line 1 ....</p>
+                            <p>Line 2</p>
+                            <p>Line 3</p>
+                            <p>Line 4</p>
+                            <p>Line 5</p>
+                            <p>Line 6</p>
+                            <p>Line 7</p>
+                            <p>Line 8</p>
+                            <p>Line 9</p>
+                            <p>Line 10</p>
+                            <p>Line 11</p>
+                            <p>Line 12</p>
+                            <p>Line 13</p>
+                            <p>Line 14</p>
+                            <p>Line 15</p>
+                            <p>Line 16</p>
+                            <p>Line 17</p>
+                            <p>Line 18</p>
+                            <p>Line 19</p>
+                            <p>Line 20</p>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
