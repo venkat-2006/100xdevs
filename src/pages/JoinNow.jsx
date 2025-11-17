@@ -65,6 +65,7 @@ const [active, setActive] = useState("courses");
                         </div>
                         <div className="pt-[30px] pl-7">
                             <Link
+                                to="/home"
                                 onClick={() => setActive("home")}
                                 className="flex items-center cursor-pointer"
                             >
