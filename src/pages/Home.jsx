@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Navbar from "../components/Navbar";
+import JoinNow from './JoinNow';
 
 function Home({ lightMode, setLightMode }) {
   return (

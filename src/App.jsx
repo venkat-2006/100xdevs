@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import JoinNow from "./pages/JoinNow";
 
 function App() {
   const [lightMode, setLightMode] = useState(false);
@@ -20,6 +21,10 @@ function App() {
       <Route 
         path="/login" 
         element={<Login lightMode={lightMode} setLightMode={setLightMode} />} 
+      />
+      <Route 
+        path="/all-courses" 
+        element={<JoinNow  />} 
       />
     </Routes>
   );

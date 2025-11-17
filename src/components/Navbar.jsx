@@ -67,10 +67,11 @@ function Navbar({ lightMode, setLightMode }) {
                   Login
                 </button>
               </Link>
-
+              <Link to="/all-courses">
               <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-4 py-2 rounded-md font-medium hover:opacity-70 transition-all duration-300 mr-12">
                 Join now
               </button>
+              </Link>
             </div>
           </div>
         </nav>
