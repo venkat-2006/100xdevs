@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ImageSlider from "../others/ImageSlider";
 
 export default function Home2() {
     const [active, setActive] = useState("home");
@@ -137,7 +138,8 @@ export default function Home2() {
                     <div className="ml-[18%] px-6 h-[calc(100vh-60px)] overflow-y-scroll">
                         
                         <div className="space-y-10">
-                            <p>Line 1</p>
+                           
+                           <ImageSlider/>
                             <p>Line 2</p>
                             <p>Line 3</p>
                             <p>Line 4</p>
