@@ -3,6 +3,9 @@ import React from "react";
 export default function Courses() {
     return (
         <>
+        <div className="text-center  text-2xl font-semibold mt-[42px]" >
+            Courses
+        </div>
         <div className="flex justify-center gap-5 flex-wrap mt-6">
 
             {/* CARD 1 */}
@@ -19,6 +22,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops + Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹5,989</span>
@@ -48,6 +55,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops Cohort
                     </h3>
+                    <div className="pt-3 font-semibold">Starts 2nd August 2024</div>
+                    <div>
+                       Complete syllabus -
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -74,6 +85,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight">
                         Complete Web3/Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -106,6 +121,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops + Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹5,989</span>
@@ -135,6 +154,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops Cohort
                     </h3>
+                    <div className="pt-3 font-semibold">Starts 2nd August 2024</div>
+                    <div>
+                       Complete syllabus -
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -161,6 +184,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight">
                         Complete Web3/Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -193,6 +220,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops + Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹5,989</span>
@@ -222,6 +253,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight pt-2">
                         Devops Cohort
                     </h3>
+                    <div className="pt-3 font-semibold">Starts 2nd August 2024</div>
+                    <div>
+                       Complete syllabus -
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -248,6 +283,10 @@ export default function Courses() {
                     <h3 className="text-[18px] font-semibold leading-tight">
                         Complete Web3/Blockchain Cohort
                     </h3>
+                    <div className="pt-3">Complete syllabus -</div>
+                    <div>
+                        https://blog.100xdevs.com/
+                    </div>
 
                     <div className="flex items-center gap-2 mt-4">
                         <span className="text-sm font-bold">₹4,989</span>
@@ -262,6 +301,9 @@ export default function Courses() {
                     </button>
                 </div>
             </div>
+
+        </div>
+        <div className="h-[160px]">
 
         </div>
         
