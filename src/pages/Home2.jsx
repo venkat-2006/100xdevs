@@ -266,7 +266,7 @@ export default function Home2() {
                             </div>
 
 
-                            <div className="bg-blue-100 rounded-2xl m-[50px] pb-[100px]  p-[15px]  grid grid-cols-8 gap-4">
+                            <div className="bg-blue-100 rounded-2xl m-[50px] pb-[70px]  p-[15px]  grid grid-cols-8 gap-4">
                                 <div className="m-[20px] col-span-3">
                                     <img
                                         src="https://appx-wsb-gcp.akamai.net.in/subject/2023-01-17-0.17044360120951185.jpg"
@@ -281,10 +281,10 @@ export default function Home2() {
                                     <div className="pt-2 text-blue-500  hover:text-blue-800 duration-300 cursor-pointer">Privacy Policy</div>
                                     <div className="pt-2 text-blue-500  hover:text-blue-800  duration-300 cursor-pointer">Refunds & Cancellation Policy</div>
                                 </div>
-                                <div className="col-span-2 mt-[20px]">
+                                <div className="col-span-2 mt-[20px] space-y-2">
                                     <div className="font-semibold" > Download App</div>
                                     <div><a href="https://play.google.com/store/apps/details?id=com.hundredx.devs" target="_blank" rel="noopener noreferrer"><img src="https://harkirat.classx.co.in/google-play.svg" alt="" /></a></div>
-                                    <h6>Follow us</h6>
+                                    <h6 className="font-semibold"> Follow us</h6>
                                     <div className="flex gap-2 flex-wrap">
                                         {/* Twitter */}
                                         <a
