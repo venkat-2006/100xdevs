@@ -154,7 +154,7 @@ export default function Home2() {
                                     />
                                     <div className="p-4">
                                         <h3 className="text-[18px] font-semibold leading-tight ">
-                                            Complete Web Development + 
+                                            Complete Web Development +
                                         </h3>
                                         <h3 className="text-[18px] font-semibold leading-tight pt-2">
                                             Devops + Blockchain Cohort
@@ -181,7 +181,7 @@ export default function Home2() {
                                     />
                                     <div className="p-4">
                                         <h3 className="text-[18px] font-semibold leading-tight ">
-                                            Complete Web Development + 
+                                            Complete Web Development +
                                         </h3>
                                         <h3 className="text-[18px] font-semibold leading-tight pt-2">
                                             Devops Cohort
@@ -210,7 +210,7 @@ export default function Home2() {
                                         <h3 className="text-[18px] font-semibold leading-tight ">
                                             Complete Web3/Blockchain Cohort
                                         </h3>
-                                        
+
 
                                         <div className="flex items-center gap-2 mt-4">
                                             <span className="text-sm font-bold">₹4,989</span>
@@ -228,21 +228,40 @@ export default function Home2() {
 
 
 
-                            <p>Line 3</p>
-                            <p>Line 4</p>
-                            <p>Line 5</p>
-                            <p>Line 6</p>
-                            <p>Line 7</p>
-                            <p>Line 8</p>
-                            <p>Line 9</p>
-                            <p>Line 10</p>
-                            <p>Line 11</p>
-                            <p>Line 12</p>
-                            <p>Line 13</p>
-                            <p>Line 14</p>
-                            <p>Line 15</p>
-                            <p>Line 16</p>
-                            <p>Line 17</p>
+                            <h5 className="text-center text-3xl font-semibold pt-6">
+                                About 100xDevs
+                            </h5>
+
+
+                            <div
+                                className="m-[50px] p-[15px] rounded-3xl space-y-4"
+                                style={{
+                                    background: "linear-gradient(270deg, #FFECB3 0%, #FFE0B2 20%, #FFCDD2 40%, #F8BBD9 60%, #E1BEE7 80%, #D1C4E9 100%)",
+                                }}
+                            >
+
+                                <div className="m-[10px]" > Welcome to 100xdevs.</div>
+                                <div className="m-[10px] flex flex-wrap gap-2 text-base">
+                                    <span>This is an initiative by</span>
+                                    <span className="font-semibold">Harkirat Singh</span>
+                                    <span>to personally mentor folks in the field of Programming.</span>
+                                </div>
+
+                                <div className="m-[10px] text-base">
+                                    Harkirat strongly feels that today you are either a 1x engineer or a 100x engineer and nothing in the middle,
+                                    and his hope is to take everyone in this community to be a
+                                    <span className="font-semibold"> 100x Engineer </span>.
+                                </div>
+
+
+                                <div className="m-[10px] pb-5 ">
+                                    Join him in his first course on Full Stack development with a heavy focus on Open source projects to learn programming practically.</div>
+
+                            </div>
+
+
+
+
                             <p>Line 18</p>
                             <p>Line 19</p>
                             <p>Line 20</p>
