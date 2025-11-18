@@ -137,7 +137,7 @@ export default function Home2() {
                     </div>
                     <div className="ml-[18%] px-6 h-[calc(100vh-60px)] overflow-y-scroll">
                         
-                        <div className="space-y-10">
+                        <div className="space-y-10 pt-11">
                            
                            <ImageSlider/>
                             <p>Line 2</p>

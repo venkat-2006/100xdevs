@@ -1,13 +1,14 @@
 .slider {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 1070px;
   margin: 0 auto;
 }
 
 .slides {
   position: relative;
   overflow: hidden;
+  border-radius: 3%;
 }
 
 .slide {
