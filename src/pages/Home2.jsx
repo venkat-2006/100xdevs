@@ -146,7 +146,7 @@ export default function Home2() {
                             <div class="flex justify-center gap-5 flex-wrap mt-6">
 
 
-                                <div class="w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden">
+                                <div class="w-[350px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
@@ -173,7 +173,7 @@ export default function Home2() {
                                 </div>
 
 
-                                <div class="w-[350px] bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
@@ -200,7 +200,7 @@ export default function Home2() {
                                 </div>
 
 
-                                <div class="w-[350px] bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div class="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
