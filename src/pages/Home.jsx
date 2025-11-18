@@ -97,8 +97,8 @@ function Home({ lightMode, setLightMode }) {
               </button>
             </div>
             <div className="relative w-full py-6">
-              <div className="absolute left-0 top-0 bottom-0 w-96 z-10 pointer-events-none bg-gradient-to-r from-black dark:from-white via-black/80 dark:via-white/80 to-transparent"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-96 z-10 pointer-events-none bg-gradient-to-l from-black dark:from-white via-black/80 dark:via-white/80 to-transparent"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
+                <div className="absolute right-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
 
               <div className="w-full max-w-7xl mx-auto overflow-hidden">
                 <div className="flex animate-scroll gap-6 pt-6 pb-4">
