@@ -59,7 +59,7 @@ export default function Home2() {
             </nav>
             <div className="pt-[60px]">
 
-               <div>
+                <div>
 
                     <div className="fixed left-0 top-[60px] w-[18%] bg-blue-100 h-[calc(100vh-60px)] overflow-auto">
 
@@ -136,11 +136,91 @@ export default function Home2() {
 
                     </div>
                     <div className="ml-[18%] px-6 h-[calc(100vh-60px)] overflow-y-scroll">
-                        
+
                         <div className="space-y-10 pt-11">
-                           
-                           <ImageSlider/>
-                            <p>Line 2</p>
+
+                            <ImageSlider />
+
+                            <h3 className="text-center text-3xl font-semibold">Featured</h3>
+
+                            <div class="flex justify-center gap-5 flex-wrap mt-6">
+
+
+                                <div class="w-[350px] bg-white rounded-2xl shadow-lg overflow-hidden">
+                                    <img
+                                        src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
+                                        alt="Complete Web Development + Devops + Blockchain Cohort"
+                                        class="w-full h-[200px] object-cover"
+                                    />
+                                    <div class="p-5">
+                                        <h3 class="text-[16px] font-semibold leading-tight">
+                                            Complete Web Development + Devops + Blockchain Cohort
+                                        </h3>
+
+                                        <div class="flex items-center gap-2 mt-4">
+                                            <span class="text-xl font-bold">₹5,989</span>
+                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
+                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                        </div>
+
+                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-[350px] bg-white rounded-xl shadow-lg overflow-hidden">
+                                    <img
+                                        src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
+                                        alt="Complete Web Development + Devops + Blockchain Cohort"
+                                        class="w-full h-[200px] object-cover"
+                                    />
+                                    <div class="p-5">
+                                        <h3 class="text-[16px] font-semibold leading-tight">
+                                            Complete Web Development + Devops + Blockchain Cohort
+                                        </h3>
+
+                                        <div class="flex items-center gap-2 mt-4">
+                                            <span class="text-xl font-bold">₹5,989</span>
+                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
+                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                        </div>
+
+                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <div class="w-[350px] bg-white rounded-xl shadow-lg overflow-hidden">
+                                    <img
+                                        src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
+                                        alt="Complete Web Development + Devops + Blockchain Cohort"
+                                        class="w-full h-[200px] object-cover"
+                                    />
+                                    <div class="p-5">
+                                        <h3 class="text-[16px] font-semibold leading-tight">
+                                            Complete Web Development + Devops + Blockchain Cohort
+                                        </h3>
+
+                                        <div class="flex items-center gap-2 mt-4">
+                                            <span class="text-xl font-bold">₹5,989</span>
+                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
+                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                        </div>
+
+                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                            View Details
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
                             <p>Line 3</p>
                             <p>Line 4</p>
                             <p>Line 5</p>
