@@ -152,18 +152,21 @@ export default function Home2() {
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
                                         class="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-5">
-                                        <h3 class="text-[16px] font-semibold leading-tight">
-                                            Complete Web Development + Devops + Blockchain Cohort
+                                    <div class="p-4">
+                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                            Complete Web Development + 
+                                        </h3>
+                                        <h3 class="text-[18px] font-semibold leading-tight pt-2">
+                                            Devops + Blockchain Cohort
                                         </h3>
 
                                         <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-xl font-bold">₹5,989</span>
+                                            <span class="text-sm font-bold">₹5,989</span>
                                             <span class="text-gray-500 line-through text-sm">₹8,499</span>
-                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">29.53% off</span>
                                         </div>
 
-                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
                                             View Details
                                         </button>
                                     </div>
@@ -176,18 +179,21 @@ export default function Home2() {
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
                                         class="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-5">
-                                        <h3 class="text-[16px] font-semibold leading-tight">
-                                            Complete Web Development + Devops + Blockchain Cohort
+                                    <div class="p-4">
+                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                            Complete Web Development + 
+                                        </h3>
+                                        <h3 class="text-[18px] font-semibold leading-tight pt-2">
+                                            Devops Cohort
                                         </h3>
 
                                         <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-xl font-bold">₹5,989</span>
-                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
-                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                            <span class="text-sm font-bold">₹4,989</span>
+                                            <span class="text-gray-500 line-through text-sm">₹5,999</span>
+                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
                                         </div>
 
-                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
                                             View Details
                                         </button>
                                     </div>
@@ -200,18 +206,19 @@ export default function Home2() {
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
                                         class="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-5">
-                                        <h3 class="text-[16px] font-semibold leading-tight">
-                                            Complete Web Development + Devops + Blockchain Cohort
+                                    <div class="p-4">
+                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                            Complete Web3/Blockchain Cohort
                                         </h3>
+                                        
 
                                         <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-xl font-bold">₹5,989</span>
-                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
-                                            <span class="text-green-600 text-sm font-semibold">29.53% off</span>
+                                            <span class="text-sm font-bold">₹4,989</span>
+                                            <span class="text-gray-500 line-through text-sm">₹5,999</span>
+                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
                                         </div>
 
-                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-lg font-medium">
+                                        <button class="w-full  bg-blue-600 text-white py-2.5 rounded-full font-medium mt-[52px]">
                                             View Details
                                         </button>
                                     </div>
