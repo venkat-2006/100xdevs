@@ -143,82 +143,82 @@ export default function Home2() {
 
                             <h3 className="text-center text-3xl font-semibold">Featured</h3>
 
-                            <div class="flex justify-center gap-5 flex-wrap mt-6">
+                            <div className="flex justify-center gap-5 flex-wrap mt-6">
 
 
-                                <div class="w-[350px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
+                                <div className="w-[350px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        class="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-4">
-                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                    <div className="p-4">
+                                        <h3 className="text-[18px] font-semibold leading-tight ">
                                             Complete Web Development + 
                                         </h3>
-                                        <h3 class="text-[18px] font-semibold leading-tight pt-2">
+                                        <h3 className="text-[18px] font-semibold leading-tight pt-2">
                                             Devops + Blockchain Cohort
                                         </h3>
 
-                                        <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-sm font-bold">₹5,989</span>
-                                            <span class="text-gray-500 line-through text-sm">₹8,499</span>
-                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">29.53% off</span>
+                                        <div className="flex items-center gap-2 mt-4">
+                                            <span className="text-sm font-bold">₹5,989</span>
+                                            <span className="text-gray-500 line-through text-sm">₹8,499</span>
+                                            <span className="text-green-500 text-sm font-semibold ml-[130px]">29.53% off</span>
                                         </div>
 
-                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
+                                        <button className="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
                                             View Details
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <div class="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
+                                <div className="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        class="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-4">
-                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                    <div className="p-4">
+                                        <h3 className="text-[18px] font-semibold leading-tight ">
                                             Complete Web Development + 
                                         </h3>
-                                        <h3 class="text-[18px] font-semibold leading-tight pt-2">
+                                        <h3 className="text-[18px] font-semibold leading-tight pt-2">
                                             Devops Cohort
                                         </h3>
 
-                                        <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-sm font-bold">₹4,989</span>
-                                            <span class="text-gray-500 line-through text-sm">₹5,999</span>
-                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
+                                        <div className="flex items-center gap-2 mt-4">
+                                            <span className="text-sm font-bold">₹4,989</span>
+                                            <span className="text-gray-500 line-through text-sm">₹5,999</span>
+                                            <span className="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
                                         </div>
 
-                                        <button class="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
+                                        <button className="w-full mt-5 bg-blue-600 text-white py-2.5 rounded-full font-medium">
                                             View Details
                                         </button>
                                     </div>
                                 </div>
 
 
-                                <div class="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
+                                <div className="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        class="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover"
                                     />
-                                    <div class="p-4">
-                                        <h3 class="text-[18px] font-semibold leading-tight ">
+                                    <div className="p-4">
+                                        <h3 className="text-[18px] font-semibold leading-tight ">
                                             Complete Web3/Blockchain Cohort
                                         </h3>
                                         
 
-                                        <div class="flex items-center gap-2 mt-4">
-                                            <span class="text-sm font-bold">₹4,989</span>
-                                            <span class="text-gray-500 line-through text-sm">₹5,999</span>
-                                            <span class="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
+                                        <div className="flex items-center gap-2 mt-4">
+                                            <span className="text-sm font-bold">₹4,989</span>
+                                            <span className="text-gray-500 line-through text-sm">₹5,999</span>
+                                            <span className="text-green-500 text-sm font-semibold ml-[130px]">16.84% off</span>
                                         </div>
 
-                                        <button class="w-full  bg-blue-600 text-white py-2.5 rounded-full font-medium mt-[52px]">
+                                        <button className="w-full  bg-blue-600 text-white py-2.5 rounded-full font-medium mt-[52px]">
                                             View Details
                                         </button>
                                     </div>
