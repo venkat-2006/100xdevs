@@ -22,12 +22,12 @@ export default function Home2() {
                             <input
                                 type="text"
                                 placeholder="Type here to Search..."
-                                className="px-4 py-2 border border-gray-300 border-r-0 
-                     rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                className="px-10 py-2 border border-gray-300 border-r-0 
+                     rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100"
                             />
 
                             <button
-                                className="px-4 py-3 bg-gray-200 text-gray-700 border border-gray-300 
+                                className="px-4 py-3 bg-gray-200 text-gray-700 border border-gray-200 
                      rounded-r-full hover:bg-gray-300 transition flex items-center justify-center"
                             >
                                 <svg
