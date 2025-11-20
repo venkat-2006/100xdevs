@@ -137,9 +137,10 @@ export default function Signup({ onClose }) {
                                     type="email"
                                     placeholder="Enter your email"
                                     value={email}
-                                    readOnly
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg"
                                 />
+
                             </div>
 
                             {/* Phone */}
@@ -211,19 +212,19 @@ export default function Signup({ onClose }) {
                             </div>
 
                             <div className="flex justify-center">
-                            <button
-                                onClick={handleNext}
-                                className="w-[100px] bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition"
-                            >
-                                Sign Up
-                            </button>
+                                <button
+                                    onClick={handleNext}
+                                    className="w-[100px] bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition"
+                                >
+                                    Sign Up
+                                </button>
                             </div>
                             <p className="text-center text-xs text-gray-600 mt-3">
-                            By signing up, you agree to our{" "}
-                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
-                            and{" "}
-                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
-                        </p>
+                                By signing up, you agree to our{" "}
+                                <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
+                                and{" "}
+                                <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
+                            </p>
                         </form>
                     </>
                 )}
