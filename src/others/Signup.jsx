@@ -135,6 +135,7 @@ export default function Signup({ onClose }) {
                                 <label className="block text-sm font-medium mb-1">Email *</label>
                                 <input
                                     type="email"
+                                    placeholder="Enter your email"
                                     value={email}
                                     readOnly
                                     className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg"
@@ -146,11 +147,12 @@ export default function Signup({ onClose }) {
                                 <label className="block text-sm font-medium mb-1">Phone *</label>
                                 <input
                                     type="text"
-                                    placeholder="Enter phone number"
+                                    placeholder="Enter your phone number"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                                 />
+                                <p className="text-xs">Please add country code if you are a user outside of India</p>
                             </div>
 
                             {/* Password */}
@@ -158,7 +160,7 @@ export default function Signup({ onClose }) {
                                 <label className="block text-sm font-medium mb-1">Password *</label>
                                 <input
                                     type="password"
-                                    placeholder="Create a password"
+                                    placeholder="Enter your password"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
@@ -174,7 +176,7 @@ export default function Signup({ onClose }) {
                                     value={state}
                                     onChange={(e) => setState(e.target.value)}
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white"
+                                    className="w-full px-4 py-3 mb-[35px] border border-gray-300 rounded-lg bg-white"
                                 >
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -208,12 +210,20 @@ export default function Signup({ onClose }) {
                                 </select>
                             </div>
 
+                            <div className="flex justify-center">
                             <button
-                                type="submit"
-                                className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+                                onClick={handleNext}
+                                className="w-[100px] bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition"
                             >
-                                Signup
+                                Sign Up
                             </button>
+                            </div>
+                            <p className="text-center text-xs text-gray-600 mt-3">
+                            By signing up, you agree to our{" "}
+                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
+                            and{" "}
+                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
+                        </p>
                         </form>
                     </>
                 )}
