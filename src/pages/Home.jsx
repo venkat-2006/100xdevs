@@ -6,15 +6,15 @@ function Home({ lightMode, setLightMode }) {
   return (
     <>
     <Navbar lightMode={lightMode} setLightMode={setLightMode} />
-      <div className="min-h-screen w-full relative">
-        {/* Full Page Black Gradient Background */}
-        <div
-          className="fixed inset-0 z-0"
-          style={{
-            background: 'linear-gradient(to bottom, #000000 0%, #1a1a1a 30%, #0a0a0a 70%, #000000 100%)',
-          }}
-        />
-        
+      <div className="min-h-screen w-full bg-black relative">
+    {/* Deep Ocean Glow */}
+    <div
+      className="absolute inset-0 z-0"
+      style={{
+        background:
+         "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)"
+      }}
+    />
         <style>{`
           * {
             margin: 0;
@@ -89,9 +89,11 @@ function Home({ lightMode, setLightMode }) {
               A beginner-friendly platform for mastering programming skills.
             </div>
             <div className="py-4 mb-8">
+              <Link to="/all-courses">
               <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-7 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
                 Explore courses
-              </button>
+              </button></Link>
+              
               <button className="bg-white/90 text-black dark:bg-black/80 dark:text-white px-7 py-3 rounded-md text-sm hover:bg-white dark:hover:bg-black transition-colors duration-200 ml-1 backdrop-blur-sm">
                 Explore Notes
               </button>
