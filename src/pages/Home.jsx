@@ -3,18 +3,19 @@ import Navbar from "../components/Navbar";
 import JoinNow from './JoinNow';
 
 function Home({ lightMode, setLightMode }) {
+
   return (
     <>
-    <Navbar lightMode={lightMode} setLightMode={setLightMode} />
+      <Navbar lightMode={lightMode} setLightMode={setLightMode} />
       <div className="min-h-screen w-full bg-black relative">
-    {/* Deep Ocean Glow */}
-    <div
-      className="absolute inset-0 z-0"
-      style={{
-        background:
-         "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)"
-      }}
-    />
+        {/* Deep Ocean Glow */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            background:
+              "radial-gradient(70% 55% at 50% 50%, #2a5d77 0%, #184058 18%, #0f2a43 34%, #0a1b30 50%, #071226 66%, #040d1c 80%, #020814 92%, #01040d 97%, #000309 100%), radial-gradient(160% 130% at 10% 10%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%), radial-gradient(160% 130% at 90% 90%, rgba(0,0,0,0) 38%, #000309 76%, #000208 100%)"
+          }}
+        />
         <style>{`
           * {
             margin: 0;
@@ -69,10 +70,10 @@ function Home({ lightMode, setLightMode }) {
         {lightMode && (
           <div className="fixed inset-0 z-0 light-mode-bg" />
         )}
-        
 
 
-       
+
+
 
         <main className="relative z-10">
           <div className="text-white dark:text-black h-screen flex flex-col items-center justify-center text-3xl transition-all duration-500">
@@ -90,17 +91,22 @@ function Home({ lightMode, setLightMode }) {
             </div>
             <div className="py-4 mb-8">
               <Link to="/all-courses">
-              <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-7 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
-                Explore courses
-              </button></Link>
-              
-              <button className="bg-white/90 text-black dark:bg-black/80 dark:text-white px-7 py-3 rounded-md text-sm hover:bg-white dark:hover:bg-black transition-colors duration-200 ml-1 backdrop-blur-sm">
+                <button className="bg-gradient-to-b from-blue-400 to-blue-700 text-white px-7 py-3 rounded-md font-medium hover:opacity-80 transition-all duration-300 text-sm mr-1">
+                  Explore courses
+                </button></Link>
+
+              <button
+                onClick={() => (window.location.href = "https://projects.100xdevs.com/")}
+                className="bg-white/90 text-black dark:bg-black/80 dark:text-white px-7 py-3 rounded-md text-sm hover:bg-white dark:hover:bg-black transition-colors duration-200 ml-1 backdrop-blur-sm"
+              >
                 Explore Notes
               </button>
+
+
             </div>
             <div className="relative w-full py-6">
-                <div className="absolute left-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
-                <div className="absolute right-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
+              <div className="absolute left-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
+              <div className="absolute right-0 top-0 bottom-0 w-96 z-10 pointer-events-none "></div>
 
               <div className="w-full max-w-7xl mx-auto overflow-hidden">
                 <div className="flex animate-scroll gap-6 pt-6 pb-4">
@@ -143,7 +149,7 @@ function Home({ lightMode, setLightMode }) {
 
           <div className="min-h-[380px] flex items-center justify-center border-b border-white/10 dark:border-gray-300 py-6">
             <div className="relative text-white w-full max-w-[1300px] mx-4 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 rounded-2xl p-8 min-h-[330px] shadow-2xl shadow-blue-500/20 flex items-center justify-between overflow-hidden">
-              
+
               <div className="z-10 max-w-[800px]">
                 <div className="text-4xl font-bold leading-tight">
                   Every developer deserves to be a great engineer, a 100x Engineer!
@@ -169,30 +175,31 @@ function Home({ lightMode, setLightMode }) {
                     </svg>
                     Download App
                   </button>
-
-                  <button className="flex items-center gap-2 bg-slate-900 text-white px-7 py-2.5 rounded-lg font-medium hover:bg-slate-800 transition-colors duration-200 shadow-md">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="w-5 h-5"
-                    >
-                      <path d="M12 3v2" />
-                      <path d="M12 19v2" />
-                      <path d="M4.93 4.93l1.41 1.41" />
-                      <path d="M17.66 17.66l1.41 1.41" />
-                      <path d="M1 12h2" />
-                      <path d="M21 12h2" />
-                      <path d="M4.93 19.07l1.41-1.41" />
-                      <path d="M17.66 6.34l1.41-1.41" />
-                      <circle cx="12" cy="12" r="3" />
-                    </svg>
-                    Join now
-                  </button>
+                  <Link to="/all-courses">
+                    <button className="flex items-center gap-2 bg-slate-900 text-white px-7 py-2.5 rounded-lg font-medium hover:bg-slate-800 transition-colors duration-200 shadow-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-5 h-5"
+                      >
+                        <path d="M12 3v2" />
+                        <path d="M12 19v2" />
+                        <path d="M4.93 4.93l1.41 1.41" />
+                        <path d="M17.66 17.66l1.41 1.41" />
+                        <path d="M1 12h2" />
+                        <path d="M21 12h2" />
+                        <path d="M4.93 19.07l1.41-1.41" />
+                        <path d="M17.66 6.34l1.41-1.41" />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                      Join now
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -222,7 +229,7 @@ function Home({ lightMode, setLightMode }) {
                     <p className="text-gray-400 dark:text-gray-600 mt-1 text-lg">because 10x ain't enough.</p>
                   </div>
                 </div>
-                
+
                 <div className="pt-10 text-lg font-semibold">Follow us</div>
                 <div className="flex gap-3 mt-3">
                   <a
