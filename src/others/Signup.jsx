@@ -56,7 +56,7 @@ export default function Signup({ onClose }) {
             />
 
             {/* Modal */}
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-2xl z-[101] w-[400px] p-8">
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl z-[101] w-[500px] p-8  ">
 
                 {/* Close Button */}
                 <button
@@ -87,21 +87,23 @@ export default function Signup({ onClose }) {
                         />
 
                         <p className="text-xs text-gray-500 mb-5">
-                            Add country code if outside India.
+                            Please add country code if you are a user outside of India
                         </p>
+                        <div className="flex justify-center">
+                            <button
+                                onClick={handleNext}
+                                className="w-[100px] bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition"
+                            >
+                                Next
+                            </button>
+                        </div>
 
-                        <button
-                            onClick={handleNext}
-                            className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition"
-                        >
-                            Next
-                        </button>
 
                         <p className="text-center text-xs text-gray-600 mt-3">
                             By signing up, you agree to our{" "}
-                            <span className="text-blue-600 underline">Terms & Conditions</span>{" "}
+                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
                             and{" "}
-                            <span className="text-blue-600 underline">Privacy Policy</span>.
+                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
                         </p>
                     </>
                 )}
