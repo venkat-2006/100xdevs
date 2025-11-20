@@ -5,6 +5,9 @@ import Login from "./pages/Login";
 import JoinNow from "./pages/JoinNow";
 import Home2 from "./pages/Home2";
 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase"; // FIXED PATH
+
 function App() {
   const [lightMode, setLightMode] = useState(false);
 
@@ -23,16 +26,23 @@ function App() {
         path="/login" 
         element={<Login lightMode={lightMode} setLightMode={setLightMode} />} 
       />
-      <Route 
-        path="/all-courses" 
-        element={<JoinNow  />} 
-      />
-      <Route 
-        path="/home" 
-        element={<Home2  />} 
-      />
+      <Route path="/all-courses" element={<JoinNow />} />
+      <Route path="/home" element={<Home2 />} />
     </Routes>
   );
 }
 
+function UserStatus() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currUser) => {
+      setUser(currUser);
+    });
+  }, []);
+
+  return <div>{user ? `Logged in: ${user.email}` : "Not logged in"}</div>;
+}
+
 export default App;
+export { UserStatus };
