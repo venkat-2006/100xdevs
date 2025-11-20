@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Courses from "../components/Courses";
+import Signup from "../others/Signup";
 
 export default function JoinNow() {
     const [active, setActive] = useState("courses");
+    const [openSignup, setOpenSignup] = useState(false);
+
 
     return (
         <>
@@ -46,7 +49,10 @@ export default function JoinNow() {
                             </button>
                         </div>
 
-                        <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+                        <button
+                            onClick={() => setOpenSignup(true)}
+                            className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+                        >
                             Signup
                         </button>
 
@@ -57,6 +63,10 @@ export default function JoinNow() {
                     </div>
                 </div>
             </nav>
+            
+                        {openSignup && (
+                            <Signup onClose={() => setOpenSignup(false)} />
+                        )}
             <div className="pt-[60px]">
 
                <div>
