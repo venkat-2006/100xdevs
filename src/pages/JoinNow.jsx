@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import Courses from "../components/Courses";
 import Signup from "../others/Signup";
 
+import { useAuth } from "../context/AuthContext";
+
 export default function JoinNow() {
     const [active, setActive] = useState("courses");
     const [openSignup, setOpenSignup] = useState(false);
+
+    const { isLoggedIn } = useAuth();
 
 
     return (
@@ -25,12 +29,12 @@ export default function JoinNow() {
                             <input
                                 type="text"
                                 placeholder="Type here to Search..."
-                                className="px-4 py-2 border border-gray-300 border-r-0 
-                     rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                className="px-10 py-2 border border-gray-300 border-r-0 
+                     rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400 bg-gray-100"
                             />
 
                             <button
-                                className="px-4 py-3 bg-gray-200 text-gray-700 border border-gray-300 
+                                className="px-4 py-3 bg-gray-200 text-gray-700 border border-gray-200 
                      rounded-r-full hover:bg-gray-300 transition flex items-center justify-center"
                             >
                                 <svg
@@ -49,27 +53,30 @@ export default function JoinNow() {
                             </button>
                         </div>
 
-                        <button
-                            onClick={() => setOpenSignup(true)}
-                            className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
-                        >
-                            Signup
-                        </button>
+                        {!isLoggedIn && (
+                            <>
+                                <button
+                                    onClick={() => setOpenSignup(true)}
+                                    className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+                                >
+                                    Signup
+                                </button>
 
-                        <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
-                            Login
-                        </button>
-
+                                <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+                                    Login
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </nav>
-            
-                        {openSignup && (
-                            <Signup onClose={() => setOpenSignup(false)} />
-                        )}
+
+            {openSignup && (
+                <Signup onClose={() => setOpenSignup(false)} />
+            )}
             <div className="pt-[60px]">
 
-               <div>
+                <div>
 
                     <div className="fixed left-0 top-[60px] w-[18%] bg-blue-100 h-[calc(100vh-60px)] overflow-auto">
 
@@ -146,8 +153,8 @@ export default function JoinNow() {
 
                     </div>
                     <div className="ml-[18%] px-6 h-[calc(100vh-60px)] overflow-y-scroll">
-                        
-                        <Courses/>
+
+                        <Courses />
                     </div>
 
                 </div>

@@ -2,7 +2,13 @@ import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
+import { useAuth } from "../context/AuthContext";   
+
+
 export default function Signup({ onClose }) {
+
+    const { setIsLoggedIn } = useAuth();
+
     const [step, setStep] = useState(1);
 
     // Step 1 input
@@ -41,6 +47,10 @@ export default function Signup({ onClose }) {
             });
 
             alert("Signup successful!");
+
+                        setIsLoggedIn(true);
+
+                        
             onClose();
         } catch (err) {
             alert(err.message);
