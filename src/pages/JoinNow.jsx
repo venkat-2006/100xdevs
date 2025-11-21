@@ -127,6 +127,7 @@ export default function JoinNow() {
                                 >
                                     Home
                                 </div>
+
                             </Link>
                         </div>
 
@@ -165,6 +166,113 @@ export default function JoinNow() {
                                 </div>
                             </Link>
                         </div>
+                        {isLoggedIn && (
+                            <>
+                                {/* Dashboard */}
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/dashboard"
+                                        onClick={() => setActive("dashboard")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className={`h-5 w-5 ${active === "dashboard" ? "text-blue-600" : "text-gray-700"
+                                                }`}
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h5V14h4v7h5a1 1 0 001-1V10"
+                                            />
+                                        </svg>
+
+                                        <div
+                                            className={`pl-3 ${active === "dashboard"
+                                                    ? "text-blue-600 font-medium"
+                                                    : "text-gray-700"
+                                                }`}
+                                        >
+                                            Dashboard
+                                        </div>
+                                    </Link>
+                                </div>
+
+                                {/* Projects */}
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/projects"
+                                        onClick={() => setActive("projects")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className={`h-5 w-5 ${active === "projects" ? "text-blue-600" : "text-gray-700"
+                                                }`}
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M12 3v18m9-9H3"
+                                            />
+                                        </svg>
+
+                                        <div
+                                            className={`pl-3 ${active === "projects"
+                                                    ? "text-blue-600 font-medium"
+                                                    : "text-gray-700"
+                                                }`}
+                                        >
+                                            Projects
+                                        </div>
+                                    </Link>
+                                </div>
+
+                                {/* Settings */}
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/settings"
+                                        onClick={() => setActive("settings")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className={`h-5 w-5 ${active === "settings" ? "text-blue-600" : "text-gray-700"
+                                                }`}
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm7.94-2.91l-1.53-.88a6.97 6.97 0 0 0 .06-1.32c0-.45-.02-.9-.06-1.32l1.53-.88a.5.5 0 0 0 .19-.68l-1.84-3.18a.5.5 0 0 0-.63-.22l-1.53.88a6.96 6.96 0 0 0-2.28-1.32V3.5a.5.5 0 0 0-.5-.5h-3.68a.5.5 0 0 0-.5.5v1.76a6.97 6.97 0 0 0-2.28 1.32l-1.53-.88a.5.5 0 0 0-.63.22L4 9.1a.5.5 0 0 0 .19.68l1.53.88a7.39 7.39 0 0 0 0 2.64l-1.53.88a.5.5 0 0 0-.19.68L5.84 18a.5.5 0 0 0 .63.22l1.53-.88a6.96 6.96 0 0 0 2.28 1.32V21.5a.5.5 0 0 0 .5.5h3.68a.5.5 0 0 0 .5-.5v-1.76a6.97 6.97 0 0 0 2.28-1.32l1.53.88a.5.5 0 0 0 .63-.22l1.84-3.18a.5.5 0 0 0-.19-.68z"
+                                            />
+                                        </svg>
+
+                                        <div
+                                            className={`pl-3 ${active === "settings"
+                                                    ? "text-blue-600 font-medium"
+                                                    : "text-gray-700"
+                                                }`}
+                                        >
+                                            Settings
+                                        </div>
+                                    </Link>
+                                </div>
+                            </>
+                        )}
+
+
 
 
                     </div>

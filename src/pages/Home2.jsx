@@ -166,6 +166,93 @@ export default function Home2() {
                                 </div>
                             </Link>
                         </div>
+                        {isLoggedIn && (
+                            <>
+                                <div className="py-[10px] pt-9 flex justify-center">
+                                    <hr className="w-[80%] border-gray-300" />
+                                </div>
+
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/dashboard"
+                                        onClick={() => setActive("dashboard")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
+                                            <path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 19h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+                                        </svg>
+
+                                        <div
+                                            className={`pl-3 ${active === "dashboard"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
+                                                }`}
+                                        >
+                                            Purchases
+                                        </div>
+                                    </Link>
+                                </div>
+
+                                {/* Projects */}
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/projects"
+                                        onClick={() => setActive("projects")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                            <path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .11-.65l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.027 7.027 0 0 0-1.62-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.41l-.36 2.54c-.6.23-1.15.54-1.62.94l-2.39-.96a.5.5 0 0 0-.61.22L2.71 8.83a.5.5 0 0 0 .11.65l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.11.65l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.47.39 1.02.71 1.62.94l.36 2.54a.5.5 0 0 0 .49.41h3.8a.5.5 0 0 0 .49-.41l.36-2.54c.6-.23 1.15-.54 1.62-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.11-.65l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
+                                        </svg>
+
+
+                                        <div
+                                            className={`pl-3 ${active === "projects"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
+                                                }`}
+                                        >
+                                            Settings
+                                        </div>
+                                    </Link>
+                                </div>
+
+                                {/* Settings */}
+                                <div className="pt-[30px] pl-7">
+                                    <Link
+                                        to="/settings"
+                                        onClick={() => setActive("settings")}
+                                        className="flex items-center cursor-pointer"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            className="size-5"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                        >
+                                            <path
+                                                d="M16 17l5-5-5-5m-9 5h14M3 3h6v18H3z"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+
+
+
+                                        <div
+                                            className={`pl-3 ${active === "settings"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
+                                                }`}
+                                        >
+                                            Logout
+                                        </div>
+                                    </Link>
+                                </div>
+                            </>
+                        )}
+
 
 
                     </div>
