@@ -67,6 +67,22 @@ export default function JoinNow() {
                                 </button>
                             </>
                         )}
+                        {isLoggedIn && (
+                            <div className="w-10 h-10 cursor-pointer">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48"
+                                    className="w-full h-full"
+                                >
+                                    <circle cx="24" cy="24" r="22" fill="black" />
+                                    <circle cx="24" cy="16" r="6" fill="white" />
+                                    <path
+                                        d="M12 36 C12 28, 20 26, 24 26 C28 26, 36 28, 36 36 Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </div>
+                        )}
                     </div>
                 </div>
             </nav>

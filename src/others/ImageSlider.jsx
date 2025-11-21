@@ -31,7 +31,7 @@ const ImageSlider = () => {
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-            className={`slide rounded w-100 img-fluid ${index === currentIndex ? 'active' : ''}`}
+            className={`slide rounded w-100 img-fluid cursor-pointer ${index === currentIndex ? 'active' : ''}`}
           />
         ))}
       </div>

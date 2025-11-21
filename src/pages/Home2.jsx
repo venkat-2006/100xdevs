@@ -67,7 +67,22 @@ export default function Home2() {
                                 </button>
                             </>
                         )}
-
+                        {isLoggedIn && (
+                            <div className="w-10 h-10 cursor-pointer">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48"
+                                    className="w-full h-full"
+                                >
+                                    <circle cx="24" cy="24" r="22" fill="black" />
+                                    <circle cx="24" cy="16" r="6" fill="white" />
+                                    <path
+                                        d="M12 36 C12 28, 20 26, 24 26 C28 26, 36 28, 36 36 Z"
+                                        fill="white"
+                                    />
+                                </svg>
+                            </div>
+                        )}
 
                     </div>
                 </div>
@@ -166,11 +181,11 @@ export default function Home2() {
                             <div className="flex justify-center gap-5 flex-wrap mt-6">
 
 
-                                <div className="w-[350px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden">
+                                <div className="w-[350px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden ">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        className="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover border-b-4"
                                     />
                                     <div className="p-4">
                                         <h3 className="text-[18px] font-semibold leading-tight ">
@@ -193,11 +208,11 @@ export default function Home2() {
                                 </div>
 
 
-                                <div className="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden">
+                                <div className="w-[350px] bg-white rounded-xl shadow-lg border border-gray-300 overflow-hidden ">
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        className="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover border-b-4"
                                     />
                                     <div className="p-4">
                                         <h3 className="text-[18px] font-semibold leading-tight ">
@@ -224,7 +239,7 @@ export default function Home2() {
                                     <img
                                         src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                                         alt="Complete Web Development + Devops + Blockchain Cohort"
-                                        className="w-full h-[200px] object-cover"
+                                        className="w-full h-[200px] object-cover border-b-4"
                                     />
                                     <div className="p-4">
                                         <h3 className="text-[18px] font-semibold leading-tight ">

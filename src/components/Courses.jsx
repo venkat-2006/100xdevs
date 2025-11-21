@@ -13,7 +13,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                     alt="Complete Web Development + Devops + Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -46,7 +46,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                     alt="Complete Web Development + Devops Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -79,7 +79,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                     alt="Complete Web3/Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -112,7 +112,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                     alt="Complete Web Development + Devops + Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -145,7 +145,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                     alt="Complete Web Development + Devops Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -178,7 +178,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                     alt="Complete Web3/Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -211,7 +211,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.07833836520330406.png"
                     alt="Complete Web Development + Devops + Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -244,7 +244,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-09-0.40079486154772104.png"
                     alt="Complete Web Development + Devops Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -277,7 +277,7 @@ export default function Courses() {
                 <img
                     src="https://appxcontent.kaxa.in/paid_course3/2024-07-07-0.8201249093606604.png"
                     alt="Complete Web3/Blockchain Cohort"
-                    className="w-full h-[200px] object-cover"
+                    className="w-full h-[200px] object-cover border-b-4"
                 />
                 <div className="p-4">
                     <h3 className="text-[18px] font-semibold leading-tight">
@@ -389,3 +389,4 @@ export default function Courses() {
         </>
     );
 }
+
