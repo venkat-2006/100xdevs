@@ -179,7 +179,7 @@ export default function Home2() {
                                         className="flex items-center cursor-pointer"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                                            <path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 19h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+                                            <path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 19h14" stroke="currentColor" strokeWidth="2" fill="none" strokeLinejoin="round" />
                                         </svg>
 
                                         <div

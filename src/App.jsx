@@ -6,10 +6,15 @@ import JoinNow from "./pages/JoinNow";
 import Home2 from "./pages/Home2";
 
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase"; // FIXED PATH
+import { auth } from "./firebase";
 
 function App() {
   const [lightMode, setLightMode] = useState(false);
+
+  useEffect(() => {
+    window.auth = auth;     // ⭐ This exposes auth to browser console  //'0G5E3TCUVUhN4VfcN1q7ERlvRKr1'
+    console.log("Auth exposed:", window.auth);
+  }, []);
 
   useEffect(() => {
     if (lightMode) document.documentElement.classList.add("dark");
@@ -32,17 +37,4 @@ function App() {
   );
 }
 
-function UserStatus() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (currUser) => {
-      setUser(currUser);
-    });
-  }, []);
-
-  return <div>{user ? `Logged in: ${user.email}` : "Not logged in"}</div>;
-}
-
 export default App;
-export { UserStatus };
