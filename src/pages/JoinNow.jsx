@@ -168,36 +168,27 @@ export default function JoinNow() {
                         </div>
                         {isLoggedIn && (
                             <>
-                                {/* Dashboard */}
+                                <div className="py-[10px] pt-9 flex justify-center">
+                                    <hr className="w-[80%] border-gray-300" />
+                                </div>
+
                                 <div className="pt-[30px] pl-7">
                                     <Link
                                         to="/dashboard"
                                         onClick={() => setActive("dashboard")}
                                         className="flex items-center cursor-pointer"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className={`h-5 w-5 ${active === "dashboard" ? "text-blue-600" : "text-gray-700"
-                                                }`}
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h5V14h4v7h5a1 1 0 001-1V10"
-                                            />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
+                                            <path d="M12 3v12m0 0l4-4m-4 4l-4-4M5 19h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
                                         </svg>
 
                                         <div
                                             className={`pl-3 ${active === "dashboard"
-                                                    ? "text-blue-600 font-medium"
-                                                    : "text-gray-700"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
                                                 }`}
                                         >
-                                            Dashboard
+                                            Purchases
                                         </div>
                                     </Link>
                                 </div>
@@ -209,29 +200,18 @@ export default function JoinNow() {
                                         onClick={() => setActive("projects")}
                                         className="flex items-center cursor-pointer"
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className={`h-5 w-5 ${active === "projects" ? "text-blue-600" : "text-gray-700"
-                                                }`}
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                d="M12 3v18m9-9H3"
-                                            />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                            <path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .11-.65l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.027 7.027 0 0 0-1.62-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.41l-.36 2.54c-.6.23-1.15.54-1.62.94l-2.39-.96a.5.5 0 0 0-.61.22L2.71 8.83a.5.5 0 0 0 .11.65l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.11.65l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.47.39 1.02.71 1.62.94l.36 2.54a.5.5 0 0 0 .49.41h3.8a.5.5 0 0 0 .49-.41l.36-2.54c.6-.23 1.15-.54 1.62-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.11-.65l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
                                         </svg>
+
 
                                         <div
                                             className={`pl-3 ${active === "projects"
-                                                    ? "text-blue-600 font-medium"
-                                                    : "text-gray-700"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
                                                 }`}
                                         >
-                                            Projects
+                                            Settings
                                         </div>
                                     </Link>
                                 </div>
@@ -245,27 +225,28 @@ export default function JoinNow() {
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className={`h-5 w-5 ${active === "settings" ? "text-blue-600" : "text-gray-700"
-                                                }`}
-                                            fill="none"
                                             viewBox="0 0 24 24"
+                                            fill="none"
+                                            className="size-5"
                                             stroke="currentColor"
                                             strokeWidth="2"
                                         >
                                             <path
+                                                d="M16 17l5-5-5-5m-9 5h14M3 3h6v18H3z"
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                d="M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm7.94-2.91l-1.53-.88a6.97 6.97 0 0 0 .06-1.32c0-.45-.02-.9-.06-1.32l1.53-.88a.5.5 0 0 0 .19-.68l-1.84-3.18a.5.5 0 0 0-.63-.22l-1.53.88a6.96 6.96 0 0 0-2.28-1.32V3.5a.5.5 0 0 0-.5-.5h-3.68a.5.5 0 0 0-.5.5v1.76a6.97 6.97 0 0 0-2.28 1.32l-1.53-.88a.5.5 0 0 0-.63.22L4 9.1a.5.5 0 0 0 .19.68l1.53.88a7.39 7.39 0 0 0 0 2.64l-1.53.88a.5.5 0 0 0-.19.68L5.84 18a.5.5 0 0 0 .63.22l1.53-.88a6.96 6.96 0 0 0 2.28 1.32V21.5a.5.5 0 0 0 .5.5h3.68a.5.5 0 0 0 .5-.5v-1.76a6.97 6.97 0 0 0 2.28-1.32l1.53.88a.5.5 0 0 0 .63-.22l1.84-3.18a.5.5 0 0 0-.19-.68z"
                                             />
                                         </svg>
 
+
+
                                         <div
                                             className={`pl-3 ${active === "settings"
-                                                    ? "text-blue-600 font-medium"
-                                                    : "text-gray-700"
+                                                ? "text-blue-600 font-medium"
+                                                : "text-gray-700"
                                                 }`}
                                         >
-                                            Settings
+                                            Logout
                                         </div>
                                     </Link>
                                 </div>
