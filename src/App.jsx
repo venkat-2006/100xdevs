@@ -8,6 +8,8 @@ import Home2 from "./pages/Home2";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 
+import CoursePage from "./pages/CoursePage";
+
 function App() {
   const [lightMode, setLightMode] = useState(false);
 
@@ -33,6 +35,9 @@ function App() {
       />
       <Route path="/all-courses" element={<JoinNow />} />
       <Route path="/home" element={<Home2 />} />
+
+      <Route path="/courses/:id" element={<CoursePage />} />
+      
     </Routes>
   );
 }

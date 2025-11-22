@@ -1,24 +1,33 @@
+// utils/purchases.js
+
 import { db } from "../firebase";
 import { auth } from "../firebase";
-import { doc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
 
-export const buyCourse = async (courseId) => {
+export async function buyCourse(courseId) {
   const user = auth.currentUser;
 
   if (!user) {
-    alert("Please login to buy the course");
+    alert("Please login first");
     return;
   }
 
-  const userRef = doc(db, "users", user.uid);
+  const uid = user.uid;
 
-  try {
+  const userRef = doc(db, "purchases", uid);
+  const userSnap = await getDoc(userRef);
+
+  if (userSnap.exists()) {
+    // Add course to existing array
     await updateDoc(userRef, {
-      purchases: arrayUnion(courseId)
+      courses: arrayUnion(courseId),
     });
-
-    alert("Course purchased successfully!");
-  } catch (error) {
-    console.error("Error buying course:", error);
+  } else {
+    // Create new document
+    await setDoc(userRef, {
+      courses: [courseId],
+    });
   }
-};
+
+  alert("Course purchased successfully!");
+}

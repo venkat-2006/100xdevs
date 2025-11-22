@@ -1,7 +1,14 @@
 import React from "react";
 
-export default function CourseCard({ course, onView }) {
+import { buyCourse } from "../utils/purchases";
+import { useNavigate } from "react-router-dom";
+
+
+
+export default function CourseCard({ course}) {
+     const navigate = useNavigate();
   return (
+    
     <>
     <div className="w-[360px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden flex flex-col">
 
@@ -36,7 +43,7 @@ export default function CourseCard({ course, onView }) {
         {/* BUTTON — stays at the bottom */}
         <button
           className="w-full mt-auto bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition "
-          onClick={() => onView(course.id)}
+          onClick={() => navigate(`/courses/${course.id}`)}
         >
           View Details
         </button>
