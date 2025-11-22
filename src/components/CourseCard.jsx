@@ -2,6 +2,7 @@ import React from "react";
 
 export default function CourseCard({ course, onView }) {
   return (
+    <>
     <div className="w-[360px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden flex flex-col">
 
       {/* IMAGE */}
@@ -34,13 +35,17 @@ export default function CourseCard({ course, onView }) {
 
         {/* BUTTON — stays at the bottom */}
         <button
-          className="w-full mt-auto bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition mt-6"
+          className="w-full mt-auto bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition "
           onClick={() => onView(course.id)}
         >
           View Details
         </button>
 
       </div>
+      
     </div>
+    
+    </>
+    
   );
 }
