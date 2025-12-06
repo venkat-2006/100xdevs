@@ -366,10 +366,11 @@ export default function JoinNow() {
                   </div>
 
                   {/* Description */}
-                  <div className="text-lg leading-relaxed text-gray-800">
+                  <div className="text-lg leading-relaxed text-gray-800 ">
                     <div className="font-bold text-xl mb-3">Description</div>
 
-                    <p className="text-gray-700 mb-4">
+
+                    <p className="text-gray-700 mb-4 ml-5">
                       Complete syllabus —{" "}
                       <a
                         href={course.syllabus}
@@ -380,16 +381,107 @@ export default function JoinNow() {
                         {course.syllabus}
                       </a>
                     </p>
-
-                    <p className="text-gray-700 whitespace-pre-line">
-                      {course.description}
-                    </p>
-
                     {course.startDate && (
-                      <p className="mt-5 font-semibold text-gray-900">
+                      <p className="mt-5 font-semibold text-gray-900 ml-5">
                         Starts on: {course.startDate}
                       </p>
                     )}
+
+                    {/* 🔽 Updated Dummy Description Text */}
+                    <p className="text-gray-700 whitespace-pre-line  ml-5">
+
+                      {`In the Web Development Cohort, we will dive deep into the MERN stack from basics.
+The goal is for you to understand any real-world MERN codebase.
+
+We will also explore DevOps fundamentals and advanced concepts.
+
+In the Web3 cohort, we will go from 0–100 in Solana and Ethereum blockchain development.
+
+
+
+WEB DEVELOPMENT
+• Foundations
+• Frontend DOM
+• Node.js/Bun/Cloudflare Runtime
+• HTTP Servers
+• NoSQL & SQL Databases
+• ORMs
+• React + Styling
+• TypeScript
+• Next.js
+• Monorepos / Turborepo / linting
+• WebSockets / realtime systems
+• Testing
+• Advanced backend architecture
+
+
+
+DEVOPS
+• Linux & Bash scripting
+• EC2 / GCP / cloud compute
+• Auto scaling
+• Containerization
+• ECS → Kubernetes
+• IaC / Terraform
+• Observability / monitoring
+• Helm package management
+• CI/CD pipelines
+• GitOps
+• CDNs & Object stores
+
+
+
+WEB3 BASICS
+• General Web3
+• EVM understanding
+• ETH client-side apps
+• Solana development
+• Solana Data model
+
+
+
+WEB3 ADVANCE
+• Solidity basics & advanced smart contract development
+• Rust basics & advanced
+• Solana on-chain programs
+• Fullstack Web2 + Web3 usecases
+
+
+
+PROJECTS & CONTRACTS
+FRONTEND
+• TODO app (DOM manipulation)
+• Gmail clone
+
+FULLSTACK
+• Excalidraw
+• Simple Chat app
+• Realtime game (Chess/Ludo)
+• Codeforces/LeetCode clone
+• Production-level realtime app
+
+WEB3 BASIC
+• Wallet creation & integration
+• Token creation & transfer
+• Solana cloud wallet backend
+
+WEB3 ADVANCE
+• Web3 Stripe-like crypto gateway
+• Crypto exchange website
+• BonkBot automation (TG/WA)
+
+ETH CONTRACTS
+• ERC20 + ERC721
+• DEX using AMM
+• Staking Contract
+
+SOLANA CONTRACTS
+• Token program
+• Staking programs
+• Web2-style backend apps on Solana`}
+                    </p>
+
+
 
                     {/* Optional Topics */}
                     {course.topics && (
@@ -403,6 +495,7 @@ export default function JoinNow() {
                       </div>
                     )}
                   </div>
+
                 </div>
 
 
