@@ -147,7 +147,7 @@ export default function JoinNow() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-5 w-5 ${active === "courses" ? "text-blue-600" : "text-gray-700"
+                  className={`h-5 w-5 ${"text-gray-700"
                     }`}
                   fill="none"
                   viewBox="0 0 24 24"
@@ -167,7 +167,7 @@ export default function JoinNow() {
                 </svg>
 
                 <div
-                  className={`pl-3 ${active === "courses" ? "text-blue-600 font-medium" : "text-gray-700"
+                  className={`pl-3 ${ "text-gray-700"
                     }`}
                 >
                   Courses
