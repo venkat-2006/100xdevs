@@ -274,60 +274,89 @@ export default function JoinNow() {
             ) : (
 
               <>
-                {/* 🔵 HERO SECTION */}
-                <div className="bg-blue-700 text-white py-20 px-6">
-                  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between">
 
-                    {/* Title */}
-                    <h1 className="text-4xl font-bold leading-tight max-w-2xl">
+                <div className="bg-blue-800 text-white px-6 py-12 relative h-[310px]">
+                  <div className="max-w-6xl mx-auto">
+                    <h1 className="text-5xl font-bold leading-[1.5] max-w-3xl w-[600px] pl-7 ">
                       {course.title}
                     </h1>
+                  </div>
+                </div>
 
-                    {/* Right — Course Card */}
-                    <div className="bg-white text-black rounded-xl shadow-xl p-5 w-full md:w-[380px] mt-6 md:mt-0">
+                {/* FLOATING CARD */}
+                <div className="relative max-w-6xl mx-auto">
+                  <div className="absolute right-0 -top-[260px] w-full md:w-[400px]">   {/* 400px width */}
+
+                    <div className="text-black rounded-2xl shadow-xl bg-blue-100 pb-6 border border-gray-300">
+
+                      {/* IMAGE */}
                       <img
                         src={course.image}
                         alt={course.title}
-                        className="rounded-xl w-full h-[180px] object-cover"
+                        className="rounded-t-2xl w-full h-[230px] object-cover"
                       />
 
-                      <div className="mt-4">
-                        <div className="text-gray-600 text-sm">PRICE</div>
+                      <div className="mt-5 px-4">
 
-                        <div className="flex items-center gap-3 mt-1">
-                          <span className="text-2xl font-bold">₹{course.price}</span>
-                          <span className="line-through text-gray-500 text-md">
-                            ₹{course.originalPrice}
-                          </span>
+                        {/* PRICE LABEL */}
+                        <div className="text-gray-400 text-xs">PRICE</div>
+
+                        {/* PRICE ROW */}
+                        <div className="flex items-center justify-between mt-1">
+                          <div className="flex items-center gap-2">
+                            <span className="text-xl font-bold">₹{course.price}</span>
+                            <span className="line-through text-gray-400 text-md">
+                              ₹{course.originalPrice}
+                            </span>
+                          </div>
+
                           <span className="text-green-600 text-md font-semibold">
                             {course.discount} off
                           </span>
                         </div>
 
-                        {/* Currency dropdown */}
-                        <div className="mt-4 text-sm">Choose Currency:</div>
-                        <select className="w-full border rounded-lg px-3 py-2 mt-1">
-                          <option>INR</option>
-                          <option>USD</option>
-                          <option>EUR</option>
-                        </select>
+                        {/* CURRENCY SELECT */}
+                        <div className="mt-4 text-sm font-semibold text-gray-700 flex items-center justify-between">
+                          <span>Choose Currency:</span>
 
-                        {/* CTA */}
-                        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold mt-5 hover:bg-blue-700">
-                          Buy Now
-                        </button>
+                          <select className="border rounded-lg px-2 py-1 bg-white w-[85px] text-sm">
+                            <option>INR</option>
+                            <option>USD</option>
+                            <option>EUR</option>
+                          </select>
+                        </div>
 
-                        <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold mt-3 hover:bg-green-700">
-                          Pay via Crypto
-                        </button>
+                        {/* BUTTONS SECTION */}
+                        <div className="mt-3 flex flex-col items-center gap-3">
+
+                          <button
+                            className="
+              w-[100%] bg-blue-600 text-white py-3 rounded-full 
+              font-semibold hover:bg-blue-700 transition text-center
+            "
+                          >
+                            Buy Now
+                          </button>
+
+                          <button
+                            className="
+              w-[100%] bg-blue-600 text-white py-3 rounded-full
+              font-semibold hover:bg-blue-700 transition text-center
+            "
+                          >
+                            Pay via Crypto
+                          </button>
+
+                        </div>
+
                       </div>
                     </div>
+
                   </div>
                 </div>
 
-
                 {/* 🔻 DETAILS SECTION */}
-                <div className="max-w-5xl mx-auto px-6 py-10">
+                <div className="max-w-6xl mx-auto px-6 pt-32 pb-10">
 
                   {/* Overview tab */}
                   <div className="border-b pb-2 mb-6">
@@ -375,6 +404,7 @@ export default function JoinNow() {
                     )}
                   </div>
                 </div>
+
 
               </>
             )}
