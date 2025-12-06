@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { COURSES } from "../data/courses";
+import COURSES from "../data/courses";
+
 import CourseCard from "./CourseCard";
 
 export default function Courses() {

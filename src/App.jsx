@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import JoinNow from "./pages/JoinNow";
 import Home2 from "./pages/Home2";
 
+
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 
@@ -37,6 +38,8 @@ function App() {
       <Route path="/home" element={<Home2 />} />
 
       <Route path="/courses/:id" element={<CoursePage />} />
+
+      
       
     </Routes>
   );

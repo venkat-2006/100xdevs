@@ -10,7 +10,7 @@ export default function CourseCard({ course}) {
   return (
     
     <>
-    <div className="w-[360px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden flex flex-col">
+    <div className="w-[360px] bg-white rounded-2xl shadow-lg border border-gray-300 overflow-hidden flex flex-col h-[450px]">
 
       {/* IMAGE */}
       <img
