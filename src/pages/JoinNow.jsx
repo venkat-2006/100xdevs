@@ -8,11 +8,17 @@ import { useAuth } from "../context/AuthContext";
 
 import Login from "../others/Login"
 
+import SettingsPopup from "../others/SettingsPopup";
+
+
 export default function JoinNow() {
     const [active, setActive] = useState("courses");
     const [openSignup, setOpenSignup] = useState(false);
 
     const [openLogin, setOpenLogin] = useState(false);
+
+    const [openSettings, setOpenSettings] = useState(false);
+
 
     const { isLoggedIn, setIsLoggedIn } = useAuth();
     const handleLogout = async () => {
@@ -110,6 +116,11 @@ export default function JoinNow() {
             )}
             {openLogin && <Login onClose={() => setOpenLogin(false)} />}
 
+            {openSettings && (
+                <SettingsPopup onClose={() => setOpenSettings(false)} />
+            )}
+
+
             <div className="pt-[60px]">
 
                 <div>
@@ -194,8 +205,8 @@ export default function JoinNow() {
 
                                 <div className="pt-[30px] pl-7">
                                     <Link
-                                        to="/dashboard"
-                                        onClick={() => setActive("dashboard")}
+                                        to="/purchases"
+                                        onClick={() => setActive("purchases")}
                                         className="flex items-center cursor-pointer"
                                     >
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
@@ -203,7 +214,7 @@ export default function JoinNow() {
                                         </svg>
 
                                         <div
-                                            className={`pl-3 ${active === "dashboard"
+                                            className={`pl-3 ${active === "purchases"
                                                 ? "text-blue-600 font-medium"
                                                 : "text-gray-700"
                                                 }`}
@@ -213,31 +224,41 @@ export default function JoinNow() {
                                     </Link>
                                 </div>
 
-                                {/* Projects */}
+
                                 <div className="pt-[30px] pl-7">
-                                    <Link
-                                        to="/projects"
-                                        onClick={() => setActive("projects")}
+                                    <div
+                                        onClick={() => {
+                                            setActive("settings");
+                                            setOpenSettings(true);
+                                        }}
                                         className="flex items-center cursor-pointer"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            width="24"
+                                            height="24"
+                                            fill="currentColor"
+                                            className={`${active === "settings" ? "text-blue-600" : "text-gray-700"
+                                                }`}
+                                        >
                                             <path d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .11-.65l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.027 7.027 0 0 0-1.62-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.41l-.36 2.54c-.6.23-1.15.54-1.62.94l-2.39-.96a.5.5 0 0 0-.61.22L2.71 8.83a.5.5 0 0 0 .11.65l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58a.5.5 0 0 0-.11.65l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.47.39 1.02.71 1.62.94l.36 2.54a.5.5 0 0 0 .49.41h3.8a.5.5 0 0 0 .49-.41l.36-2.54c.6-.23 1.15-.54 1.62-.94l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.11-.65l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
                                         </svg>
 
-
                                         <div
-                                            className={`pl-3 ${active === "projects"
+                                            className={`pl-3 ${active === "settings"
                                                 ? "text-blue-600 font-medium"
                                                 : "text-gray-700"
                                                 }`}
                                         >
                                             Settings
                                         </div>
-                                    </Link>
+                                    </div>
                                 </div>
 
-                                {/* Settings */}
-                                <div className="pt-[30px] pl-7">
+
+
+                                <div className="pt-[30px] pl-8">
                                     <div
                                         onClick={handleLogout}
                                         className="flex items-center cursor-pointer"
