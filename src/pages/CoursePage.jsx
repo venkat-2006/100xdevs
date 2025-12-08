@@ -24,6 +24,47 @@ export default function CoursePage() {
   const { id } = useParams();
   const course = COURSES.find(c => c.id === id);
 
+  // Currency conversion state
+  const [currency, setCurrency] = useState("INR");
+  const [convertedPrice, setConvertedPrice] = useState(course.price);
+
+  // INR → Other currency conversion rates
+  const rates = {
+    INR: 1,
+    USD: 0.012,
+    EUR: 0.011,
+    AED: 0.044,
+    GBP: 0.0096,
+    AUD: 0.018,
+    CAD: 0.017,
+    SGD: 0.016,
+    JPY: 1.86,
+    CHF: 0.011,
+    CNY: 0.087,
+    HKD: 0.095,
+    NZD: 0.02,
+    ZAR: 0.22,
+    THB: 0.43,
+    MYR: 0.056,
+    KRW: 16.08,
+    SEK: 0.13,
+    NOK: 0.13,
+    DKK: 0.083,
+    BRL: 0.059,
+    RUB: 1.11,
+    MXN: 0.20
+  };
+
+  // Handle dropdown change
+  const handleCurrencyChange = (e) => {
+    const selected = e.target.value;
+    setCurrency(selected);
+
+    const converted = (course.price * rates[selected]).toFixed(2);
+    setConvertedPrice(converted);
+  };
+
+
   // Logout function
   const handleLogout = async () => {
     try {
@@ -303,14 +344,44 @@ export default function CoursePage() {
                         <div className="mt-4 text-sm font-semibold text-gray-700 flex items-center justify-between">
                           <span>Choose Currency:</span>
 
-                          <select className="border rounded-lg px-2 py-1 bg-white w-[85px] text-sm">
+                          <select
+                            value={currency}
+                            onChange={handleCurrencyChange}
+                            className="border rounded-lg px-2 py-1 bg-white w-[85px] text-sm"
+                          >
+
                             <option>INR</option>
                             <option>USD</option>
                             <option>EUR</option>
+                            <option>AED</option>
+                            <option>GBP</option>
+                            <option>AUD</option>
+                            <option>CAD</option>
+                            <option>SGD</option>
+                            <option>JPY</option>
+                            <option>CHF</option>
+                            <option>CNY</option>
+                            <option>HKD</option>
+                            <option>NZD</option>
+                            <option>ZAR</option>
+                            <option>THB</option>
+                            <option>MYR</option>
+                            <option>KRW</option>
+                            <option>SEK</option>
+                            <option>NOK</option>
+                            <option>DKK</option>
+                            <option>BRL</option>
+                            <option>RUB</option>
+                            <option>MXN</option>
+
                           </select>
                         </div>
 
                         {/* BUTTONS SECTION */}
+                        <div className="mt-3 font-semibold text-blue-900">
+                          Total in {currency} (approx.): {convertedPrice}
+                        </div>
+
                         <div className="mt-3 flex flex-col items-center gap-3">
 
                           <button
