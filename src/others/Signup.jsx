@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
-
-import { useAuth } from "../context/AuthContext";   
-
+import { auth, db } from "../firebase";
+import { doc, setDoc, collection, query, where, getDocs } from "firebase/firestore";
+import { useAuth } from "../context/AuthContext";
 
 export default function Signup({ onClose }) {
-
     const { setIsLoggedIn } = useAuth();
 
     const [step, setStep] = useState(1);
@@ -19,8 +17,9 @@ export default function Signup({ onClose }) {
     const [password, setPassword] = useState("");
     const [phone, setPhone] = useState("");
     const [fullName, setFullName] = useState("");
-    const [state, setState] = useState("");
+    const [state, setState] = useState("Andhra Pradesh");
 
+    // Step 1 → Step 2 transition handler
     const handleNext = () => {
         if (!firstInput.trim()) return alert("Please enter email or phone");
 
@@ -33,29 +32,40 @@ export default function Signup({ onClose }) {
         setStep(2);
     };
 
+    // Final Signup Handler
     const handleSignup = async (e) => {
         e.preventDefault();
 
         try {
+            // CHECK DUPLICATE PHONE BEFORE SIGNUP
+            const q = query(collection(db, "users"), where("phone", "==", phone));
+            const snap = await getDocs(q);
+
+            if (!snap.empty) {
+                alert("Phone number already registered!");
+                return;
+            }
+
+            // Create Authentication user
             await createUserWithEmailAndPassword(auth, email, password);
-            console.log("Signup with:", {
+
+            // Save user profile in Firestore
+            await setDoc(doc(db, "users", auth.currentUser.uid), {
                 fullName,
                 email,
                 phone,
-                password,
                 state,
             });
 
             alert("Signup successful!");
-
-                        setIsLoggedIn(true);
-
-                        
+            setIsLoggedIn(true);
             onClose();
+
         } catch (err) {
             alert(err.message);
         }
     };
+
 
     return (
         <>
@@ -66,7 +76,7 @@ export default function Signup({ onClose }) {
             />
 
             {/* Modal */}
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl z-[101] w-[500px] p-8  ">
+            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-3xl shadow-2xl z-[101] w-[500px] p-8">
 
                 {/* Close Button */}
                 <button
@@ -76,7 +86,7 @@ export default function Signup({ onClose }) {
                     ✕
                 </button>
 
-                {/* ------------------- STEP 1 ------------------- */}
+                {/* STEP 1 */}
                 {step === 1 && (
                     <>
                         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -92,13 +102,13 @@ export default function Signup({ onClose }) {
                             placeholder="Enter your phone number or email"
                             value={firstInput}
                             onChange={(e) => setFirstInput(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-1 
-              focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
 
                         <p className="text-xs text-gray-500 mb-5">
                             Please add country code if you are a user outside of India
                         </p>
+
                         <div className="flex justify-center">
                             <button
                                 onClick={handleNext}
@@ -107,18 +117,10 @@ export default function Signup({ onClose }) {
                                 Next
                             </button>
                         </div>
-
-
-                        <p className="text-center text-xs text-gray-600 mt-3">
-                            By signing up, you agree to our{" "}
-                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
-                            and{" "}
-                            <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
-                        </p>
                     </>
                 )}
 
-                {/* ------------------- STEP 2 ------------------- */}
+                {/* STEP 2 */}
                 {step === 2 && (
                     <>
                         <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
@@ -148,7 +150,8 @@ export default function Signup({ onClose }) {
                                     placeholder="Enter your email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg"
+                                    required
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                                 />
 
                             </div>
@@ -161,9 +164,9 @@ export default function Signup({ onClose }) {
                                     placeholder="Enter your phone number"
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
+                                    required
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                                 />
-                                <p className="text-xs">Please add country code if you are a user outside of India</p>
                             </div>
 
                             {/* Password */}
@@ -182,7 +185,6 @@ export default function Signup({ onClose }) {
                             {/* State */}
                             <div>
                                 <label className="block text-sm font-medium mb-1">State *</label>
-
                                 <select
                                     value={state}
                                     onChange={(e) => setState(e.target.value)}
@@ -217,24 +219,17 @@ export default function Signup({ onClose }) {
                                     <option value="Uttar Pradesh">Uttar Pradesh</option>
                                     <option value="Uttarakhand">Uttarakhand</option>
                                     <option value="West Bengal">West Bengal</option>
-
                                 </select>
                             </div>
 
                             <div className="flex justify-center">
                                 <button
-                                    onClick={handleNext}
+                                    type="submit"
                                     className="w-[100px] bg-blue-600 text-white py-3 rounded-full font-medium hover:bg-blue-700 transition"
                                 >
                                     Sign Up
                                 </button>
                             </div>
-                            <p className="text-center text-xs text-gray-600 mt-3">
-                                By signing up, you agree to our{" "}
-                                <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Terms & Conditions</span>{" "}
-                                and{" "}
-                                <span className="text-blue-600 underline cursor-pointer hover:text-blue-800">Privacy Policy</span>.
-                            </p>
                         </form>
                     </>
                 )}

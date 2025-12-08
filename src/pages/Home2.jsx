@@ -4,11 +4,15 @@ import ImageSlider from "../others/ImageSlider";
 import Signup from "../others/Signup";
 
 import { useAuth } from "../context/AuthContext";
+import Login from "../others/Login";
 
 
 export default function Home2() {
     const [active, setActive] = useState("home");
     const [openSignup, setOpenSignup] = useState(false);
+
+    const [openLogin, setOpenLogin] = useState(false);
+
 
     const { isLoggedIn } = useAuth();
 
@@ -62,9 +66,13 @@ export default function Home2() {
                                     Signup
                                 </button>
 
-                                <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">
+                                <button
+                                    onClick={() => setOpenLogin(true)}
+                                    className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+                                >
                                     Login
                                 </button>
+
                             </>
                         )}
                         {isLoggedIn && (
@@ -91,6 +99,8 @@ export default function Home2() {
             {openSignup && (
                 <Signup onClose={() => setOpenSignup(false)} />
             )}
+            {openLogin && <Login onClose={() => setOpenLogin(false)} />}
+
             <div className="pt-[60px]">
 
                 <div>
