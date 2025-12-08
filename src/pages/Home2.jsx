@@ -206,7 +206,7 @@ export default function Home2() {
 
                                 <div className="pt-[30px] pl-7">
                                     <Link
-                                        to="/dashboard"
+                                        to="/purchases"
                                         onClick={() => setActive("purchases")}
                                         className="flex items-center cursor-pointer"
                                     >
@@ -215,7 +215,7 @@ export default function Home2() {
                                         </svg>
 
                                         <div
-                                            className={`pl-3 ${active === "dashboard"
+                                            className={`pl-3 ${active === "purchases"
                                                 ? "text-blue-600 font-medium"
                                                 : "text-gray-700"
                                                 }`}
