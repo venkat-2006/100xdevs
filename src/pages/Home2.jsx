@@ -2,19 +2,30 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ImageSlider from "../others/ImageSlider";
 import Signup from "../others/Signup";
-
-import { useAuth } from "../context/AuthContext";
 import Login from "../others/Login";
 
+import { logoutUser } from "../utils/logoutUser";
+import { useAuth } from "../context/AuthContext";
 
 export default function Home2() {
+
     const [active, setActive] = useState("home");
     const [openSignup, setOpenSignup] = useState(false);
-
     const [openLogin, setOpenLogin] = useState(false);
 
+    // Only call context once
+    const { isLoggedIn, setIsLoggedIn } = useAuth();
 
-    const { isLoggedIn } = useAuth();
+    const handleLogout = async () => {
+        try {
+            await logoutUser();      // Firebase logout
+            setIsLoggedIn(false);    // Update UI state
+            alert("Logged out successfully!");
+        } catch (err) {
+            alert(err.message);
+        }
+    };
+
 
 
     return (
@@ -203,7 +214,7 @@ export default function Home2() {
                                     </Link>
                                 </div>
 
-                                {/* Projects */}
+
                                 <div className="pt-[30px] pl-7">
                                     <Link
                                         to="/projects"
@@ -226,11 +237,10 @@ export default function Home2() {
                                     </Link>
                                 </div>
 
-                                {/* Settings */}
+
                                 <div className="pt-[30px] pl-7">
-                                    <Link
-                                        to="/settings"
-                                        onClick={() => setActive("settings")}
+                                    <div
+                                        onClick={handleLogout}
                                         className="flex items-center cursor-pointer"
                                     >
                                         <svg
@@ -248,17 +258,13 @@ export default function Home2() {
                                             />
                                         </svg>
 
-
-
                                         <div
-                                            className={`pl-3 ${active === "settings"
-                                                ? "text-blue-600 font-medium"
-                                                : "text-gray-700"
-                                                }`}
+                                            className="pl-3 text-gray-700 hover:text-blue-600 font-medium"
                                         >
                                             Logout
                                         </div>
-                                    </Link>
+                                    </div>
+
                                 </div>
                             </>
                         )}

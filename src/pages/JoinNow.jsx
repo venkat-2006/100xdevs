@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Courses from "../components/Courses";
 import Signup from "../others/Signup";
 
+import { logoutUser } from "../utils/logoutUser";
 import { useAuth } from "../context/AuthContext";
 
 import Login from "../others/Login"
@@ -13,7 +14,16 @@ export default function JoinNow() {
 
     const [openLogin, setOpenLogin] = useState(false);
 
-    const { isLoggedIn } = useAuth();
+    const { isLoggedIn, setIsLoggedIn } = useAuth();
+    const handleLogout = async () => {
+        try {
+            await logoutUser();      // Firebase logout
+            setIsLoggedIn(false);    // Update UI state
+            alert("Logged out successfully!");
+        } catch (err) {
+            alert(err.message);
+        }
+    };
 
 
     return (
@@ -228,9 +238,8 @@ export default function JoinNow() {
 
                                 {/* Settings */}
                                 <div className="pt-[30px] pl-7">
-                                    <Link
-                                        to="/settings"
-                                        onClick={() => setActive("settings")}
+                                    <div
+                                        onClick={handleLogout}
                                         className="flex items-center cursor-pointer"
                                     >
                                         <svg
@@ -248,17 +257,13 @@ export default function JoinNow() {
                                             />
                                         </svg>
 
-
-
                                         <div
-                                            className={`pl-3 ${active === "settings"
-                                                ? "text-blue-600 font-medium"
-                                                : "text-gray-700"
-                                                }`}
+                                            className="pl-3 text-gray-700 hover:text-blue-600 font-medium"
                                         >
                                             Logout
                                         </div>
-                                    </Link>
+                                    </div>
+
                                 </div>
                             </>
                         )}
