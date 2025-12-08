@@ -29,6 +29,7 @@ export default function Courses() {
         ))}
       </div>
       <div className="h-[120px]"></div>
+      <hr />
 
 <div className="bg-blue-100 rounded-2xl m-[50px] pb-[70px] p-[15px] grid grid-cols-8 gap-4">
 

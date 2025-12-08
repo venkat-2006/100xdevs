@@ -422,7 +422,7 @@ export default function Home2() {
 
 
                             </div>
-
+                            <hr />
 
                             <div className="bg-blue-100 rounded-2xl m-[50px] pb-[70px]  p-[15px]  grid grid-cols-8 gap-4">
                                 <div className="m-[20px] col-span-3">
