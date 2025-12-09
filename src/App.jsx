@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import JoinNow from "./pages/JoinNow";
 import Home2 from "./pages/Home2";
+import Purchases from "./sections/purchases"; 
+
 
 
 import { onAuthStateChanged } from "firebase/auth";
@@ -38,6 +40,9 @@ function App() {
       <Route path="/home" element={<Home2 />} />
 
       <Route path="/courses/:id" element={<CoursePage />} />
+
+      <Route path="/purchases" element={<Purchases />} />
+
 
       
       
