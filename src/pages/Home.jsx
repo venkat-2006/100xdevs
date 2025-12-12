@@ -158,7 +158,10 @@ function Home({ lightMode, setLightMode }) {
                   Give yourself the power you deserve with a 100xdevs today!
                 </div>
                 <div className="flex gap-x-2 py-6">
-                  <button className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 shadow-md">
+                  <button 
+                  onClick={() => (window.location.href = "https://play.google.com/store/apps/details?id=com.hundredx.devs")}
+                  className="flex items-center gap-2 bg-white text-black px-6 py-2.5 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 shadow-md
+                  ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
