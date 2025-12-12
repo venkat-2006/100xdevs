@@ -13,7 +13,8 @@ import PurchasePopup from "../others/PurchasePopup";
 import { SECRET_PURCHASE_CODE, auth } from "../firebase";
 
 
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+
 import { db } from "../firebase";
 
 
@@ -87,8 +88,7 @@ export default function CoursePage() {
       alert(err.message);
     }
   };
-
- const handlePurchase = async (enteredCode) => {
+const handlePurchase = async (enteredCode) => {
   try {
     if (enteredCode !== SECRET_PURCHASE_CODE) {
       alert("Invalid Purchase Code!");
@@ -102,15 +102,23 @@ export default function CoursePage() {
 
     const uid = auth.currentUser.uid;
 
-    await setDoc(
-      doc(db, "users", uid, "purchases", course.id),
-      {
-        courseId: course.id,
-        title: course.title,
-        image: course.image,
-        purchasedAt: new Date().toISOString(),
-      }
-    );
+    const purchaseRef = doc(db, "users", uid, "purchases", course.id);
+    const existing = await getDoc(purchaseRef);
+
+    //  Check if already purchased
+    if (existing.exists()) {
+      alert("You have already purchased this course!");
+      setOpenPurchasePopup(false);
+      return;
+    }
+
+    //  Create new purchase
+    await setDoc(purchaseRef, {
+      courseId: course.id,
+      title: course.title,
+      image: course.image,
+      purchasedAt: new Date().toISOString(),
+    });
 
     alert("Purchase Successful!");
     setOpenPurchasePopup(false);
@@ -118,6 +126,7 @@ export default function CoursePage() {
     alert(err.message);
   }
 };
+
 
 
   return (
