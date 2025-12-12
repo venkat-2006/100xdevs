@@ -2,9 +2,9 @@
 
 import { db } from "../firebase";
 import { auth } from "../firebase";
-import { doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 
-export async function buyCourse(courseId) {
+export async function buyCourse(courseId, courseData) {
   const user = auth.currentUser;
 
   if (!user) {
@@ -14,20 +14,13 @@ export async function buyCourse(courseId) {
 
   const uid = user.uid;
 
-  const userRef = doc(db, "purchases", uid);
-  const userSnap = await getDoc(userRef);
+  // WRITE TO THE CORRECT PATH
+  const purchaseRef = doc(db, "users", uid, "purchases", courseId);
 
-  if (userSnap.exists()) {
-    // Add course to existing array
-    await updateDoc(userRef, {
-      courses: arrayUnion(courseId),
-    });
-  } else {
-    // Create new document
-    await setDoc(userRef, {
-      courses: [courseId],
-    });
-  }
+  await setDoc(purchaseRef, {
+    ...courseData,
+    purchasedAt: serverTimestamp(),
+  });
 
   alert("Course purchased successfully!");
 }

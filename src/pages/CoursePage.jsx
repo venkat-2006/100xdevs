@@ -10,9 +10,12 @@ import { useAuth } from "../context/AuthContext";
 
 
 import PurchasePopup from "../others/PurchasePopup";
-import { SECRET_PURCHASE_CODE, db, auth } from "../firebase";
+import { SECRET_PURCHASE_CODE, auth } from "../firebase";
+
 
 import { doc, setDoc } from "firebase/firestore";
+import { db } from "../firebase";
+
 
 import COURSES from "../data/courses";
 
@@ -85,9 +88,8 @@ export default function CoursePage() {
     }
   };
 
-  const handlePurchase = async (enteredCode) => {
+ const handlePurchase = async (enteredCode) => {
   try {
-    // 🔹 validate
     if (enteredCode !== SECRET_PURCHASE_CODE) {
       alert("Invalid Purchase Code!");
       return;
@@ -98,23 +100,25 @@ export default function CoursePage() {
       return;
     }
 
-    // 🔹 Save purchase
+    const uid = auth.currentUser.uid;
+
     await setDoc(
-      doc(db, "purchases", `${auth.currentUser.uid}_${course.id}`),
+      doc(db, "users", uid, "purchases", course.id),
       {
-        userId: auth.currentUser.uid,
         courseId: course.id,
-        purchasedAt: new Date(),
+        title: course.title,
+        image: course.image,
+        purchasedAt: new Date().toISOString(),
       }
     );
 
     alert("Purchase Successful!");
     setOpenPurchasePopup(false);
-
   } catch (err) {
     alert(err.message);
   }
 };
+
 
   return (
     <>
