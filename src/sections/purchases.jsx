@@ -13,7 +13,7 @@ export default function Purchases() {
       try {
         // Use auth.currentUser directly, just like in CoursePage
         const user = auth.currentUser;
-        
+
         if (!user) {
           console.log("❌ No user logged in");
           setLoading(false);
@@ -60,20 +60,24 @@ export default function Purchases() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {purchases.map(course => (
-            <div key={course.id} className="shadow-lg rounded-lg p-4 border">
+            <div key={course.id} className="shadow-lg rounded-lg p-4 border flex flex-col">
               <img
                 src={course.image}
                 alt={course.title}
-                className="w-full h-40 object-cover rounded"
+                className="w-full h-60 object-cover rounded-2xl"
               />
+
               <h2 className="text-xl font-semibold mt-3">{course.title}</h2>
+
               <p className="text-sm text-gray-500 mt-2">
                 Purchased: {new Date(course.purchasedAt).toLocaleDateString()}
               </p>
-              <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+
+              <button className="mt-auto mb-2 bg-blue-600 text-white px-4 py-2  hover:bg-blue-700 transition w-[210px] rounded-lg">
                 View Course
               </button>
             </div>
+
           ))}
         </div>
       )}
