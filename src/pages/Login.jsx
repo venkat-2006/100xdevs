@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function Login({ lightMode, setLightMode }) {
   const navigate = useNavigate();
@@ -8,9 +10,18 @@ export default function Login({ lightMode, setLightMode }) {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    navigate("/dashboard");
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+
+      
+      navigate("/dashboard");
+
+    } catch (err) {
+      alert(err.message);
+    }
   }
 
   return (

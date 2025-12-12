@@ -7,6 +7,9 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  
+  const [loginCredentials, setLoginCredentials] = useState(null);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setIsLoggedIn(!!user);
@@ -16,7 +19,12 @@ export function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+    <AuthContext.Provider value={{ 
+        isLoggedIn, 
+        setIsLoggedIn,
+        loginCredentials,       
+        setLoginCredentials     
+    }}>
       {children}
     </AuthContext.Provider>
   );
