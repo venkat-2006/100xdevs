@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db, auth } from "../firebase";  // Import auth directly
+import { db, auth } from "../firebase";
+import { useNavigate } from "react-router-dom";  
 
 console.log("🔥 Purchases component LOADED");
 
@@ -8,10 +9,11 @@ export default function Purchases() {
   const [purchases, setPurchases] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const navigate = useNavigate();   
+
   useEffect(() => {
     async function fetchPurchases() {
       try {
-        // Use auth.currentUser directly, just like in CoursePage
         const user = auth.currentUser;
 
         if (!user) {
@@ -60,7 +62,10 @@ export default function Purchases() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {purchases.map(course => (
-            <div key={course.id} className="shadow-lg rounded-lg p-4 border flex flex-col">
+            <div 
+              key={course.id} 
+              className="shadow-lg rounded-lg p-4 border flex flex-col"
+            >
               <img
                 src={course.image}
                 alt={course.title}
@@ -73,11 +78,13 @@ export default function Purchases() {
                 Purchased: {new Date(course.purchasedAt).toLocaleDateString()}
               </p>
 
-              <button className="mt-auto mb-2 bg-blue-600 text-white px-4 py-2  hover:bg-blue-700 transition w-[210px] rounded-lg">
+              <button
+                className="mt-auto mb-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-[210px]"
+                onClick={() => navigate(`/courses/${course.id}`)}  
+              >
                 View Course
               </button>
             </div>
-
           ))}
         </div>
       )}
